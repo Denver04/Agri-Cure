@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./navbar.css";
-import { NavLink , Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {motion} from "framer-motion"
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -9,12 +9,18 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 function Navbar() {
     const [drawer , setDrawer] = useState(false);
+    const [mode , setMode] = useState(true);
     const openDrawer = () =>{
         setDrawer(!drawer);
         // console.log(drawer);
+    }
+    const changeMode = () =>{
+       setMode(!mode);
     }
 
     const NavbarVariants = {
@@ -36,6 +42,11 @@ function Navbar() {
     <div className='navbar'>
         <div className='menu-icon' >
             <MenuIcon className='icon' onClick={openDrawer}/>
+        </div>
+        <div onClick={changeMode} className='menu-icon'>
+            {
+                mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
+            }
         </div>
         {
             drawer && 
