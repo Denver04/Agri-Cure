@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Navbar from './Components/Navbar/Navbar';
+import Body from './Components/Body/Body';
+import Home from './Components/Home/Home';
+import { Route , Routes , useLocation} from 'react-router-dom';
+import ScrolTop from './Components/ScrollTop/ScrolTop';
+import { AnimatePresence } from 'framer-motion';
+import Contact from './Components/Contact/Contact';
+import Footer from "./Components/footer/Footer"
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <BrowserRouter>
+    <AnimatePresence>
+      <Navbar />
+      <ScrolTop />
+      <Routes location={location} key={location.key}>
+        <Route path='/' element={<Home />} />
+        <Route path='/start' element={<Body />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+      {/* <Footer /> */}
+      <ScrolTop />
+      <Footer />
+    </AnimatePresence>
+    // </BrowserRouter>
+  )
 }
 
 export default App;

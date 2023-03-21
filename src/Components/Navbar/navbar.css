@@ -1,0 +1,85 @@
+.navbar{
+    border: solid thin grey;
+    padding: 7px 30px;
+    background-color: rgb(235, 233, 233);
+    /* position: fixed; */
+    /* width: 100%; */
+    z-index: 999;
+}
+.menu-icon .icon{
+    padding: 7px;
+    cursor: pointer;
+}
+.menu-icon .icon:hover{
+    background-color: #d8d2d2;
+    border-radius: 50%;
+}
+.drawer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 84.7%;
+    left: 0;
+    width: unset;
+    padding: 1.5rem;
+    top: 3.5rem;
+    background-color: #1dd1a1;
+    /* background-color: #44bd32; */
+    align-items: center;
+    z-index: 999;
+}
+.drawer-links{
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.linkss::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3%;
+    left: 0;
+    top: 5.2rem;
+    background-color: black;
+    transition: 0.5s;
+}
+.linkss:hover::before{
+    width: 100%;
+}
+.linkss{
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    /* color: #10ac84; */
+    color: black;
+    transition: 0.5s;
+}
+.linkss:hover{
+    cursor: pointer;
+    color: #10ac84;
+}
+.hovering-box{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    padding: 1px 2px;
+    border-radius: 50%;
+}
+.hovering{
+    width: 34px;
+    height: 29px;
+    display: flex;
+    transition: 0.5s;
+    margin-bottom: 0px;
+}
+.drawer-links:hover .hovering{
+    transform: translateX(-89%);
+}
+.hovering .icon ,.hovering .icon-2{
+    color: #000000;
+    font-size: 30px;
+}
+  
