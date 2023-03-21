@@ -1,7 +1,9 @@
 .navbar{
     border: solid thin grey;
     padding: 7px 30px;
-    background-color: rgb(235, 233, 233);
+    /* background-color: rgb(235, 233, 233); */
+    background-color: var(--navbg);
+    color: var(--text);
     /* position: fixed; */
     /* width: 100%; */
     z-index: 999;
@@ -14,7 +16,7 @@
     cursor: pointer;
 }
 .menu-icon .icon:hover{
-    background-color: #d8d2d2;
+    background-color: var(--navshadow);
     border-radius: 50%;
 }
 .drawer{
