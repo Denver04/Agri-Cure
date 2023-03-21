@@ -65,6 +65,7 @@
     position: absolute;
     content: "\f061";
     font: var(--fa-font-solid);
+    /* font-family: "FontAwesome"; */
     top: 18px;
     right: -2rem;
     transition: 0.5s;
