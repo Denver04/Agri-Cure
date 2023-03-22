@@ -121,6 +121,7 @@ iframe{
     background-color: #4cd137;
     transition: all 0.5s;
     z-index: 999;
+    width: 100%;
 }
 .submit-link:hover{
     cursor: pointer;

@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./body.css"
 // import pfp from "../../images/agri.jpg"
 import ajhu from "../../images/pfp.png"
 import demo1 from "../../images/demo1.jpg"
 import demo2 from "../../images/demo2.jpg"
 import demo3 from "../../images/demo3.jpg"
-import demo4 from "../../images/demo4.jpg"
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Body() {
   const bodyvariants={
@@ -26,12 +26,56 @@ function Body() {
     }
   }
 
-  const [file, setFile] = useState(ajhu);
-    function handleChange(e) {
-      e.preventDefault();
-        // console.log(e.target.files);
-      setFile(URL.createObjectURL(e.target.files[0]));
+  const[imageName, setImageName] = useState('');
+  const [file , setFile] = useState(ajhu);
+  const[images, setImages] = useState([{}]);
+  const[status, setStatus] = useState('');
+
+  let api = "http://127.0.0.1:8000/api";
+
+  const saveImage = () => {
+    console.log("saveImage");
+
+    let formData = new FormData();
+    formData.append('image', imageName);
+
+    let axioConfig = {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     }
+
+    console.log(formData);
+    axios.post(api + '/images/', formData, axioConfig).then(
+      response => {
+        console.log(response);
+        setStatus(response.data.message, "success");
+      }
+    ).catch(error => {
+      console.log(error);
+      setStatus("Error while uploading image to server");
+    });
+  }
+
+  const getImages = () => {
+    axios.get(api + '/images').then(
+      response => {
+        console.log(response);
+        setImages(response.data);
+      }
+    ).catch(error => {
+      console.log(error);
+    });
+  }
+
+  useEffect(() => {
+    getImages();
+  }, []);
+
+  const imageBtn = (e) => {
+    setFile(URL.createObjectURL(e.target.files[0]));
+    setImageName(e.target.files[0]);
+  };
 
   return (
     <motion.div 
@@ -43,13 +87,14 @@ function Body() {
     >
       <div className="leftbody">
         <h1>Upload your file</h1>
-        <div className="inputs">
-          <input className="input-file" type="file" onChange={handleChange} accept="image/*" />
-        </div>
+        <form className="inputs">
+          <input className="input-file" type="file" onChange={imageBtn} accept="image/*" />
+          {/* <input type="submit" className="submit" value="Submit" /> */}
+        </form>
         <div className="image">
           <img className="img-prev" src={file} />
         </div>
-        <Link to="/ajhu" className="submit-link">Submit</Link>
+        <Link style={{textDecoration:"none"}} to="/ajhu"><button onClick={saveImage} className="submit-link">Submit</button></Link>
       </div>
       <hr />
       <div className="rightbody">
@@ -72,7 +117,7 @@ function Body() {
           <figcaption>Background should be clear</figcaption>
         </figure> */}
         <iframe
-          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          src="https://youtu.be/ek3XRY-Vew0">
         </iframe>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import cont from "../../images/c.svg"
 import "./contact.css";
 import {motion} from "framer-motion"
+import {Link} from "react-router-dom"
 
 function Contact() {
 
