@@ -4,7 +4,7 @@ from keras.models import load_model
 
 def process_image(img_path):
     # load model
-    model = load_model('Model_v1_resnet50_4epoch.h5')
+    model = load_model('Model_v1_resnet50_4epoch')
     
     # mapping dict
     d = {
