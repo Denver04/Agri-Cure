@@ -105,7 +105,7 @@ function Body() {
         </div>
         {/* {
           btn &&  */}
-          <Link style={{textDecoration:"none"}} className={`${"submit-link"} ${btn && "display"}`} to="/ajhu"><button onClick={saveImage} >Submit</button></Link>
+          <button onClick={saveImage} className={`${"submit-link"} ${btn && "display"}`}><Link className="links" style={{textDecoration:"none"}} to="/ajhu">Submit</Link></button>
         {/* } */}
       </div>
       <hr />

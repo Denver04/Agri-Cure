@@ -25,9 +25,10 @@
 .home-info .textomimage{
     /* position: absolute; */
     top: 4rem;
-    font-size: 44px;
+    font-size: 60px;
     color: black;
     letter-spacing: 2px;
+    text-shadow: 5px 5px 10px #bfcafd;
 }
 .textomimage2{
     /* position: absolute; */
@@ -56,6 +57,7 @@
     font-weight: bold;
     position: relative;
     z-index: 999;
+    margin-top: 5rem;
 }
 .btn-link:hover{
     cursor: pointer;

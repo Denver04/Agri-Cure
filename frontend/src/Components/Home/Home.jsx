@@ -1,17 +1,17 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "./home.css";
 // import agri from "../../images/agri.jpg";
 // import "../../extra.js";
-import CircleType from "circletype";
+// import CircleType from "circletype";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Home() {
   // const [show , setShow] = useState(true);
-  useEffect(() => {
-    const circle = new CircleType(document.getElementById("simple_arc"));
-    circle.radius(950);
-  }, []);
+  // useEffect(() => {
+  //   const circle = new CircleType(document.getElementById("simple_arc"));
+  //   circle.radius(950);
+  // }, []);
 
   const containerVariants = {
     hidden:{
@@ -38,7 +38,7 @@ function Home() {
       exit="exit"
       >
         <div className="home-info">
-          <h1 id="simple_arc" className="textomimage">lorem ipsum ajhu bujhu</h1>
+          <h1 id="simple_arc" className="textomimage">Agri-Cure</h1>
           <p className="textomimage2">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis est,
             consequuntur illo officia voluptatum ad, maxime deleniti temporibus
