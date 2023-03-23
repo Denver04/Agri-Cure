@@ -2,7 +2,7 @@
     /* position: relative; */
     width: 100%;
     height: 100%;
-    background-image: url(../../images/agri3.jpg);
+    background-image: url(../../images/agri4.jpeg);
     /* filter: grayscale(0.7); */
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 100%;
     height: 100%;
     /* background-image: url(../../images/agri3.jpg); */
     display: flex;
@@ -26,7 +26,7 @@
     /* position: absolute; */
     top: 4rem;
     font-size: 44px;
-    color: #6ab04c;
+    color: black;
     letter-spacing: 2px;
 }
 .textomimage2{
@@ -48,8 +48,8 @@
     font-size: 20px;
     border-radius: 25px;
     z-index: 999;
-    background-color: #2ecc71;
-    border: 2px solid #009432;
+    background-color: #8dffc6;
+    /* border: 2px solid #009432; */
     transition: 0.5s;
     text-decoration: none;
     color: black;
@@ -74,19 +74,15 @@
     font-size: 24px;
 }
 .btn-link:hover::after{
-    right: 1.5rem;
+    right: 3.5rem;
     top: 18px;
     visibility: visible;
     opacity: 1;
 }
 
-
 @media screen and (max-width:500px) {
     .home-info .textomimage{
         font-size: 25px;
-    }
-    .home-info{
-        width: 100%;
     }
     .home-info .textomimage2{
         text-align: left;
@@ -95,6 +91,12 @@
     }
     .btn-link{
         width: unset;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .home-info .textomimage{
+        font-size: 16px;
     }
 }
 
@@ -110,20 +112,9 @@
     .btn-link{
         width: unset;
     }
-    .home-info{
-        width: 90%;
-    }
 }
 
 @media screen and (min-width:769px) and (max-width:1024px){
-    /* .home{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    } */
-    .home-info{
-        width: 70%;
-    }
     .btn-link{
         width: unset;
     }
