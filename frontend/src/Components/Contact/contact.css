@@ -37,6 +37,7 @@
 }
 .contact-form h4{
     font-size: 50px;
+    color: var(--text);
 }
 .contact-form span{
     font-weight: bold;
@@ -77,7 +78,7 @@
     transition: all 0.5s;
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
     .contact{
         display: unset;
         padding: unset;
@@ -89,7 +90,8 @@
     .contact .contact-form{
         width: 100%;
         margin: 1rem auto;
-        background-color: white;
+        background-image: linear-gradient(to top, #2ecc71 , rgba(255,0,0,0));
+        box-shadow: 2px 2px 25px #3e3e3e;
     }
     .contact-form .input{
         width: 90%;
@@ -98,6 +100,12 @@
     .contact-form input, textarea{
         padding: unset;
     }
+    .send-icon{
+        width: unset;
+    }
+    /* .contact-form h4{
+        color: var(--bg);
+    } */
 }
 
 @media screen and (max-width:750px){
@@ -107,7 +115,7 @@
     }
 }
 
-@media screen and (min-width:501px) and (max-width:1000px){
+@media screen and (min-width:601px) and (max-width:1024px){
     .contact{
         display: unset;
         padding: unset;
@@ -119,15 +127,20 @@
     .contact .contact-form{
         width: 90%;
         margin: 1rem auto;
+        background-image: linear-gradient(to top, #2ecc71 , rgba(255,0,0,0));
+        box-shadow: 2px 2px 25px #3e3e3e;
     }
     .contact-form .input{
         width: 90%;
         margin: auto;
     }
+    /* .contact-form h4{
+        color: var(--bg);
+    } */
 }
 
-@media screen and (min-width:801px) and (max-width:1025px){
+/* @media screen and (min-width:801px) and (max-width:1025px){
     .contact .contact-form{
         width: 90%;
     }
-}
+} */

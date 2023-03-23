@@ -80,7 +80,7 @@ iframe{
 .demo-fig{
     width: 44%;
     height: 30vh;
-    margin: 0.5rem 0 20px 0rem;
+    margin: 0.5rem 0 50px 0rem;
     border-radius: 10px;
 }
 .demo-img{
@@ -135,29 +135,54 @@ iframe{
     font-size: 20px;
     font-weight: 550;
 }
-/* .submit-link::before{
-    content: " ";
-    position: absolute;
-    top: 0rem;
-    left: -4rem;
-    width: 100%;
-    border-radius: 20px;
-    height: 100%;
-    background-color: #44bd32;
-    transition: all 0.8s;
-    visibility: 0;
-    opacity: 0;
-    z-index: -999;
-} */
-/* .submit-link:hover::before{
-    left: 0;
-    display:unset;
-    opacity: 1;
-    visibility: 1;
-} */
 figcaption{
     font-weight: bold;
     font-size: 15px;
     text-align: center;
     color: var(--figcaption);
+}
+
+@media screen and (max-width:600px) {
+    .demo{
+        width: 90%;
+        margin: auto;
+    }
+    .leftbody{
+        width: 90%;
+        margin: auto;
+    }
+    .demo-fig{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    iframe{
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .body{
+        display: unset;
+    }
+    .body hr{
+        height: 0;
+    }
+    .rightbody{
+        width: unset;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1024px){
+    .leftbody{
+        width: 100%;
+        margin: auto;
+    }
+    .demo{
+        justify-content: space-evenly;
+    }
+    .demo-fig{
+        width: 45%;
+    }
 }

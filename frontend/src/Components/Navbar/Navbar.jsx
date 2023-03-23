@@ -23,7 +23,7 @@ function Navbar({change}) {
     }
     const changeMode = () =>{
        setMode(!mode);
-       change(mode);
+       change(!mode);
     }
 
     const NavbarVariants = {

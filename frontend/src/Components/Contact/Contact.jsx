@@ -31,7 +31,7 @@ function Contact() {
       exit="exit"
       >
           <div className='contact-image'>
-              <img src={cont} />
+              <img src={cont} alt="photos is here" />
           </div>
           <div className='contact-form'>
               <h4>Contact Us</h4>

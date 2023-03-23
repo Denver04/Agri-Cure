@@ -33,8 +33,8 @@ function Body() {
 
   const[imageName, setImageName] = useState('');
   const [file , setFile] = useState(ajhu);
-  const[images, setImages] = useState([{}]);
-  const[status, setStatus] = useState('');
+  const[, setImages] = useState([{}]);
+  const[, setStatus] = useState('');
   const [btn , setBtn] = useState(false);
 
 
@@ -77,6 +77,7 @@ function Body() {
 
   useEffect(() => {
     getImages();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const imageBtn = (e) => {
@@ -123,17 +124,9 @@ function Body() {
           <img className="demo-img" src={demo3} alt="clear bg" />
           <figcaption>Leaf should be differentiable from the background</figcaption>
         </figure>
-        {/* <figure className="demo-fig">
-          <img className="demo-img" src={demo4} alt="Trulli" />
-          <figcaption>Background should be clear</figcaption>
-        </figure> */}
         <iframe
-// <<<<<<< HEAD:src/Components/Body/Body.jsx
           title="YT link"
           src="https://www.youtube.com/embed/tgbNymZ7vqY">
-{/* ======= */}
-          {/* src="https://youtu.be/ek3XRY-Vew0"> */}
-{/* >>>>>>> ced8f7b19a1e5d5444d6ab4c70804b597e055422:frontend/src/Components/Body/Body.jsx */}
         </iframe>
         </div>
       </div>

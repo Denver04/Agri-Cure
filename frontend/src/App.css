@@ -8,7 +8,7 @@ main{
   background-color: var(--bg);
 }
 :root{
-  --navbg: background-color: rgb(235, 233, 233);
+  --navbg: rgb(218 211 211);
   --text: #0f0c0c; 
   --navshadow: #c3c3c3;
   --bg: rgb(241 241 241 / 1);
@@ -23,13 +23,13 @@ main{
   --navbg: rgb(14 20 27 / 1);
   --text: #efe1e1;
   --navshadow: #616161ad;
-  --bg: black; 
+  --bg: #202021; 
   --footerbg: #345140;
   --figcaption: white;
   --drawer: rgb(14 20 27 / 1);
   --drawertext: white;
   --drawericon: #00ff1696;
-  --textshadow: rgb(255 241 241 / 46%);
+  --textshadow: rgb(177 177 177 / 46%);
 }
 /* rgb(14 20 27 / 1) */
 /* rgb(241 241 241 / 1) */
