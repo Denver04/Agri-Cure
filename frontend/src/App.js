@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css'
 import Navbar from './Components/Navbar/Navbar';
 import Body from './Components/Body/Body';
@@ -22,7 +21,7 @@ function App() {
     // <BrowserRouter>
     <main theme={theme}>
     <AnimatePresence>
-      <Navbar className={`${theme && "mode"}`} change={change}  />
+      <Navbar change={change}/>
       <ScrolTop />
       <Routes location={location} key={location.key}>
         <Route path='/' element={<Home />} />

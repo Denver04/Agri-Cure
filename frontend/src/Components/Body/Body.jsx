@@ -1,4 +1,9 @@
+// <<<<<<< HEAD:src/Components/Body/Body.jsx
+/* eslint-disable jsx-a11y/img-redundant-alt */
+// import React, { useState } from "react";
+// =======
 import React, { useState, useEffect } from "react";
+// >>>>>>> ced8f7b19a1e5d5444d6ab4c70804b597e055422:frontend/src/Components/Body/Body.jsx
 import "./body.css"
 // import pfp from "../../images/agri.jpg"
 import ajhu from "../../images/pfp.png"
@@ -30,12 +35,14 @@ function Body() {
   const [file , setFile] = useState(ajhu);
   const[images, setImages] = useState([{}]);
   const[status, setStatus] = useState('');
+  const [btn , setBtn] = useState(false);
+
 
   let api = "http://127.0.0.1:8000/api";
 
-  const saveImage = () => {
+  const saveImage = (e) => {
+    
     console.log("saveImage");
-
     let formData = new FormData();
     formData.append('image', imageName);
 
@@ -74,6 +81,7 @@ function Body() {
 
   const imageBtn = (e) => {
     setFile(URL.createObjectURL(e.target.files[0]));
+    setBtn(true);
     setImageName(e.target.files[0]);
   };
 
@@ -88,13 +96,16 @@ function Body() {
       <div className="leftbody">
         <h1>Upload your file</h1>
         <form className="inputs">
-          <input className="input-file" type="file" onChange={imageBtn} accept="image/*" />
+          <input className="input-file" type="file" onChange={imageBtn} accept="image/*" required />
           {/* <input type="submit" className="submit" value="Submit" /> */}
         </form>
         <div className="image">
-          <img className="img-prev" src={file} />
+          <img className="img-prev" src={file} alt="image preview" />
         </div>
-        <Link style={{textDecoration:"none"}} to="/ajhu"><button onClick={saveImage} className="submit-link">Submit</button></Link>
+        {/* {
+          btn &&  */}
+          <Link style={{textDecoration:"none"}} className={`${"submit-link"} ${btn && "display"}`} to="/ajhu"><button onClick={saveImage} >Submit</button></Link>
+        {/* } */}
       </div>
       <hr />
       <div className="rightbody">
@@ -117,7 +128,12 @@ function Body() {
           <figcaption>Background should be clear</figcaption>
         </figure> */}
         <iframe
-          src="https://youtu.be/ek3XRY-Vew0">
+// <<<<<<< HEAD:src/Components/Body/Body.jsx
+          title="YT link"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+{/* ======= */}
+          {/* src="https://youtu.be/ek3XRY-Vew0"> */}
+{/* >>>>>>> ced8f7b19a1e5d5444d6ab4c70804b597e055422:frontend/src/Components/Body/Body.jsx */}
         </iframe>
         </div>
       </div>

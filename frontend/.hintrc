@@ -11,6 +11,14 @@
           "meta[name=theme-color]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "aspect-ratio"
+        ]
+      }
     ]
   }
 }

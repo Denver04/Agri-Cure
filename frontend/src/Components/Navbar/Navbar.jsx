@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useRef , useEffect } from 'react';
 import "./navbar.css";
 import { NavLink } from 'react-router-dom';
 import {motion} from "framer-motion"
@@ -11,8 +11,10 @@ import ContactPageIcon from '@mui/icons-material/ContactPage';
 import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Navbar({change}) {
+
     const [drawer , setDrawer] = useState(false);
     const [mode , setMode] = useState(true);
     const openDrawer = () =>{
@@ -39,6 +41,26 @@ function Navbar({change}) {
         }
       }
 
+      
+    useEffect(() => {
+        document.addEventListener("click" , handleOutsideClick , true)
+        // let handler = () => {
+        //     setDrawer(false);
+        // }
+    } , []);
+      
+    const refs = useRef(null);
+            
+    const handleOutsideClick = (e) => {
+    const element = refs.current;
+    if(element!==e.target){
+        setDrawer(false);
+        }
+    else{
+        setDrawer(true);
+        }
+    }
+
   return (
     <div className={`navbar ${ mode && "dark"}`}>
         <div className={`menu-icon`} >
@@ -56,7 +78,9 @@ function Navbar({change}) {
             initial="hidden"
             animate="visible"
             exit="exit"
+            ref={refs}
             >
+                <div onClick={openDrawer} className='menu-icon'><CloseIcon className='icon'/></div>
                 <NavLink to="/" end className="linkss">
                 <div className='drawer-links'>
                     <div className='hovering-box'>
@@ -92,9 +116,9 @@ function Navbar({change}) {
                     Contact
                 </div>
                 </NavLink>
-                <div className='drawer-links'>
+                {/* <div className='drawer-links'>
                     <button className='theme-change'>Change theme</button>
-                </div>
+                </div> */}
             </motion.div>
         } 
     </div>

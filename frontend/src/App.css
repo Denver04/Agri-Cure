@@ -4,13 +4,34 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+main{
+  background-color: var(--bg);
+}
 :root{
   --navbg: background-color: rgb(235, 233, 233);
   --text: #0f0c0c; 
-  --navshadow: #e6e5e5;
+  --navshadow: #c3c3c3;
+  --bg: rgb(241 241 241 / 1);
+  --footerbg: #27ae60;
+  --figcaption: dimgrey;
+  --drawer: #e5e5e5;
+  --drawertext: black;
+  --drawericon: black;
+  --textshadow: rgba(0,0,0,0.3);
 }
 [theme="dark"]{
-  --navbg: #0c0c0f;
+  --navbg: rgb(14 20 27 / 1);
   --text: #efe1e1;
-  --navshadow: #414141ad;
+  --navshadow: #616161ad;
+  --bg: black; 
+  --footerbg: #345140;
+  --figcaption: white;
+  --drawer: rgb(14 20 27 / 1);
+  --drawertext: white;
+  --drawericon: #00ff1696;
+  --textshadow: rgb(255 241 241 / 46%);
 }
+/* rgb(14 20 27 / 1) */
+/* rgb(241 241 241 / 1) */
+/* #36393e */ 
+/* #f5fafa */

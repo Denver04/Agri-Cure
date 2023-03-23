@@ -47,6 +47,7 @@ function Contact() {
                   <span>Message :</span>
                   <textarea type="text" rows="5" cols="5" required />
               </div>
+              <Link to="/send" className='send-icon'><button className='send'>Send</button></Link>
           </div>
       </motion.div>
     )

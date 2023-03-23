@@ -6,8 +6,9 @@
     align-items: center;
     padding: 25px 0px;
     gap: 10px;
+    color: var(--text);
     /* background-color: rgb(209, 209, 209); */
-    background-color: #27ae60;
+    background-color:var(--footerbg);
 }
 .footer-link{
     display: flex;
@@ -18,7 +19,7 @@
 .footer-link .links{
     position: relative;
     text-decoration: none;
-    color: black;
+    color: var(--text);
     transition: 0.5s;
 }
 .footer-link hr{
@@ -42,7 +43,7 @@ hr{
     height: 2px;
     top: 24px;
     left: 0;
-    background-color: black;
+    background-color: var(--text);
     /* background-color:#2e53da; */
     transition: 0.3s ease-in-out;
 }

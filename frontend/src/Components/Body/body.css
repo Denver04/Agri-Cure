@@ -18,7 +18,7 @@
     text-align: center;
     margin: 20px 0;
     color: #44bd32;
-    text-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+    text-shadow: 5px 5px 20px var(--textshadow);
 }
 .inputs{
     display: flex;
@@ -107,7 +107,6 @@ iframe{
 }
 .submit-link{
     position: relative;
-    font-size: 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -116,17 +115,25 @@ iframe{
     padding: 10px;
     border-radius: 20px;
     margin-top: 1rem;
-    font-weight: bolder;
     color: black;
     background-color: #4cd137;
     transition: all 0.5s;
     z-index: 999;
-    width: 100%;
+    visibility: hidden;
+}
+.display{
+    visibility: visible;
 }
 .submit-link:hover{
     cursor: pointer;
     transform: scale(1.05);
     /* background-color:#63dc51 ; */
+}
+.submit-link button{
+    border: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 550;
 }
 /* .submit-link::before{
     content: " ";
@@ -152,5 +159,5 @@ figcaption{
     font-weight: bold;
     font-size: 15px;
     text-align: center;
-    color: dimgrey;
+    color: var(--figcaption);
 }

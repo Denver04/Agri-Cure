@@ -1,4 +1,5 @@
 .navbar{
+    /* position: fixed; */
     border: solid thin grey;
     padding: 7px 30px;
     /* background-color: rgb(235, 233, 233); */
@@ -14,6 +15,7 @@
 .menu-icon .icon{
     padding: 7px;
     cursor: pointer;
+    border-radius: 50%;
 }
 .menu-icon .icon:hover{
     background-color: var(--navshadow);
@@ -21,19 +23,21 @@
 }
 .drawer{
     position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    height: 84.7%;
+    height: 100vh;
     left: 0;
     width: unset;
-    padding: 1.5rem;
-    top: 3.5rem;
-    background-color: #1dd1a1;
+    padding: 1rem 2rem;
+    top: 0rem;
+    background-color: var(--drawer);
     /* background-color: #44bd32; */
     align-items: center;
     z-index: 999;
 }
 .drawer-links{
+    color: var(--drawertext);
     position: relative;
     padding: 2rem 0;
     display: flex;
@@ -48,7 +52,7 @@
     height: 3%;
     left: 0;
     top: 5.2rem;
-    background-color: black;
+    background-color: var(--drawertext);
     transition: 0.5s;
 }
 .linkss:hover::before{
@@ -84,7 +88,6 @@
     transform: translateX(-89%);
 }
 .hovering .icon ,.hovering .icon-2{
-    color: #000000;
+    color: var(--drawertext);
     font-size: 30px;
 }
-  
