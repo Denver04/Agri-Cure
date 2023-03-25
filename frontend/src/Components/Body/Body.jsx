@@ -1,11 +1,5 @@
-// <<<<<<< HEAD:src/Components/Body/Body.jsx
-/* eslint-disable jsx-a11y/img-redundant-alt */
-// import React, { useState } from "react";
-// =======
 import React, { useState, useEffect } from "react";
-// >>>>>>> ced8f7b19a1e5d5444d6ab4c70804b597e055422:frontend/src/Components/Body/Body.jsx
 import "./body.css"
-// import pfp from "../../images/agri.jpg"
 import ajhu from "../../images/pfp.png"
 import demo1 from "../../images/demo1.jpg"
 import demo2 from "../../images/demo2.jpg"
@@ -33,7 +27,6 @@ function Body() {
 
   const[imageName, setImageName] = useState('');
   const [file , setFile] = useState(ajhu);
-  const[, setImages] = useState([{}]);
   const[, setStatus] = useState('');
   const [btn , setBtn] = useState(false);
   const [show , setShow] = useState(false);
