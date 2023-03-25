@@ -54,7 +54,7 @@ def process_image(img_path):
         42 : 'Tea_algal_leaf',
         43 : 'Tea_bird_eye_spot',
         44 : 'Tea_brown_blight',
-        45 : 'Tea_gray_light',
+        45 : 'Tea_gray_blight',
         46 : 'Tea_healthy',
         47 : 'Tea_red_leaf_spot',
         48 : 'Tea_white_spot',
