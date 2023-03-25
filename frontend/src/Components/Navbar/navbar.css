@@ -1,6 +1,6 @@
 .navbar{
     /* position: fixed; */
-    /* border: solid thin grey; */
+    border-bottom: solid thin rgb(63, 63, 63);
     padding: 7px 30px;
     /* background-color: rgb(235, 233, 233); */
     background-color: var(--navbg);

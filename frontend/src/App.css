@@ -18,6 +18,7 @@ main{
   --drawertext: black;
   --drawericon: black;
   --textshadow: rgba(0,0,0,0.3);
+  --submit: #27ae60;
 }
 [theme="dark"]{
   --navbg: rgb(14 20 27 / 1);
@@ -30,6 +31,7 @@ main{
   --drawertext: white;
   --drawericon: #00ff1696;
   --textshadow: rgb(177 177 177 / 46%);
+  --submit: #232323;
 }
 /* rgb(14 20 27 / 1) */
 /* rgb(241 241 241 / 1) */

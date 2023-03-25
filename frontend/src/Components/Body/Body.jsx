@@ -36,6 +36,8 @@ function Body() {
   const[, setImages] = useState([{}]);
   const[, setStatus] = useState('');
   const [btn , setBtn] = useState(false);
+  const [show , setShow] = useState(false);
+  const [msg ,setMsg] = useState("");
 
 
   let api = "http://127.0.0.1:8000/api";
@@ -55,30 +57,16 @@ function Body() {
     console.log(formData);
     axios.post(api + '/images/', formData, axioConfig).then(
       response => {
-        console.log(response);
+        console.log(response.data);
+        setMsg(response.data.prediction)
         setStatus(response.data.message, "success");
       }
     ).catch(error => {
       console.log(error);
       setStatus("Error while uploading image to server");
     });
+    setShow(true);
   }
-
-  const getImages = () => {
-    axios.get(api + '/images').then(
-      response => {
-        console.log(response);
-        setImages(response.data);
-      }
-    ).catch(error => {
-      console.log(error);
-    });
-  }
-
-  useEffect(() => {
-    getImages();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const imageBtn = (e) => {
     setFile(URL.createObjectURL(e.target.files[0]));
@@ -94,6 +82,7 @@ function Body() {
     animate="visible"
     exit="exit"
     >
+      <div className="body-left">
       <div className="leftbody">
         <h1>Upload your file</h1>
         <form className="inputs">
@@ -105,7 +94,7 @@ function Body() {
         </div>
         {/* {
           btn &&  */}
-          <Link style={{textDecoration:"none"}} className={`${"submit-link"} ${btn && "display"}`} to="/ajhu"><button onClick={saveImage} >Submit</button></Link>
+          <button onClick={saveImage} className={`${"submit-link"} ${btn && "display"}`}>Submit</button>
         {/* } */}
       </div>
       <hr />
@@ -129,6 +118,17 @@ function Body() {
           src="https://www.youtube.com/embed/tgbNymZ7vqY">
         </iframe>
         </div>
+      </div>
+      </div>
+      <div className="body-right">
+          {
+            show &&
+            <>
+            <h1>
+              {msg}
+            </h1>
+            </>
+          }
       </div>
     </motion.div>
   )
