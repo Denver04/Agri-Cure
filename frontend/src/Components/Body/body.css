@@ -11,20 +11,22 @@
 .body-left{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .body-right{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .leftbody{
     width: 33%;
+    top: 0;
 }
 .rightbody{
-    position: relative;
     width: 50%;
 }
+
 .body h1{
     text-align: center;
     margin: 20px 0;
@@ -113,7 +115,7 @@ iframe{
     color: #ffffff;
     --webkit-transform: rotate(180deg);
     border: 2px;
-    width: 1px;
+    width: 0px;
     height: 50vh;
 }
 .submit-link{
@@ -125,7 +127,7 @@ iframe{
     border: solid thin grey;
     padding: 10px;
     border-radius: 10px;
-    color: black;
+    color: var(--text);
     background-color: var(--submit);
     transition: all 0.5s;
     z-index: 999;
@@ -135,6 +137,8 @@ iframe{
     font-weight: bold;
     margin: 1rem auto;
     visibility: hidden;
+    color: var(--text);
+    border: solid thin var(--submitbr);
 }
 .display{
     visibility: visible;
@@ -159,6 +163,32 @@ figcaption{
 .links{
     color: var(--text);
 }
+.resultfromcnn{
+    border: solid thin var(--textshadow);
+    font-family: 'Palanquin Dark', sans-serif;
+    width: 85%;
+    margin-top: 3rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px var(--textshadow);
+}
+.resultfromcnn h1{
+    color: #27ae60;
+    font-size: 40px;
+}
+.resultname , .resultcause, .resultcure, .resultsymptom{
+    padding: 15px 30px;
+}
+.resultfromcnn p span{
+    color: var(--resultspan);
+    font-weight: bold;
+    font-size: 25px;
+}
+.resultfromcnn p{
+    color: var(--text);
+    font-size: 19px;
+    letter-spacing: 1px;
+}
 
 @media screen and (max-width:600px) {
     .demo{
@@ -181,6 +211,16 @@ figcaption{
     .image{
         height: 40vh;
     }
+    .resultfromcnn{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .resultfromcnn p span{
+        font-size: 20px;
+    }
+    .resultfromcnn p{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width:1024px){
@@ -192,6 +232,10 @@ figcaption{
     }
     .rightbody{
         width: unset;
+        margin-bottom: 2rem;
+    }
+    .body-left{
+        display: unset;
     }
 }
 
@@ -205,5 +249,15 @@ figcaption{
     }
     .demo-fig{
         width: 45%;
+    }
+    .resultfromcnn{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+    .resultfromcnn p span{
+        font-size: 22px;
+    }
+    .resultfromcnn p{
+        font-size: 18px;
     }
 }
