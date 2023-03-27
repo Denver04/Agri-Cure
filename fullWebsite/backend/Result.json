@@ -1,0 +1,107 @@
+{
+    "Apple scab": {
+        "Symptoms": "Olive-green spots on leaves which later turn brown and velvety. Fruits have scabby spots.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected leaves and fruits. Spray with fungicides."
+    },
+    "Apple Black rot": {
+        "Symptoms": "Brown to black circular lesions on fruit. Fruit shrivels and becomes mummified.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected fruits. Spray with fungicides."
+    },
+    "Apple Cedar apple rust": {
+        "Symptoms": "Yellow spots on leaves which later turn orange or brown. Fruits have scabby spots.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected leaves and fruits. Spray with fungicides."
+    },
+    "Apple healthy": {
+        "Symptoms": "This is a healthy apple leaf.",
+        "Causes": "Not Applicable.",
+        "Cure": "Not Applicable."
+    },
+    "Corn (maize) Cercospora leaf spot Gray leaf spot": {
+        "Symptoms": "Small tan to brown spots with reddish-brown borders on leaves. Leaves turn yellow and die early.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected leaves. Rotate crops."
+    },
+    "Corn (maize) Common rust": {
+        "Symptoms": "Small, circular, brick-red to cinnamon-brown pustules on leaves.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected leaves. Rotate crops."
+    },
+    "Corn (maize) Northern Leaf Blight": {
+        "Symptoms": "Long, elliptical lesions with gray-green centers and dark borders on leaves. Leaves may die early.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected leaves. Rotate crops."
+    },
+    "Corn (maize) healthy": {
+        "Symptoms": "This is a healthy Corn leaf.",
+        "Causes": "Not Applicable.",
+        "Cure": "Not Applicable."
+    },
+    "Grape Black rot": {
+        "Symptoms": "Small, circular, sunken spots on fruit which later enlarge and become covered with black spores. Fruits shrivel and become mummified.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected fruits. Spray with fungicides."
+    },
+    "Grape Esca (Black Measles)": {
+        "Symptoms": "Reddish-brown streaks on canes which later turn black. Leaves turn yellow or red then brown. Fruits shrivel and become mummified.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected parts of the plant. Spray with fungicides."
+    },
+    "Grape Leaf blight (Isariopsis Leaf Spot)": {
+        "Symptoms": "Small, circular, reddish-brown spots on leaves which later enlarge and become irregularly shaped with gray centers and reddish-brown borders.",
+        "Causes": "Fungus.",
+        "Cure": "Remove and destroy infected leaves. Spray with fungicides."
+    },
+    "Grape healthy": {
+        "Symptoms": "This is a healthy Grape leaf.",
+        "Causes": "Not Applicable.",
+        "Cure": "Not Applicable."
+    },
+    "Mango apoderus javanicus": {
+        "Symptoms": "Leaves are eaten away by the larvae of the beetle.",
+        "Causes": "Beetle larvae.",
+        "Cure": "Remove and destroy infested leaves and spray with insecticides."
+    },
+    "Mango aulacaspis tubercularis": {
+        "Symptoms": "White, waxy coverings on leaves and stems. Leaves turn yellow and die early.",
+        "Causes": "Scale insects.",
+        "Cure": "Remove and destroy infested leaves and stems. Spray with insecticides."
+    },
+    "Mango ceroplastes rubens": {
+        "Symptoms": "White, waxy coverings on leaves and stems. Leaves turn yellow and die early.",
+        "Causes": "Scale insects.",
+        "Cure": "Remove and destroy infested leaves and stems. Spray with insecticides."
+    },
+    "Mango cisaberoptus kenyae": {
+        "Symptoms": "Leaves are eaten away by the larvae of the beetle.",
+        "Causes": "Beetle larvae.",
+        "Cure": "Remove and destroy infested leaves and spray with insecticides."
+    },
+    "Mango dappula tertia": {
+        "Symptoms": "Leaves are eaten away by the larvae of the beetle.",
+        "Causes": "Beetle larvae.",
+        "Cure": "Remove and destroy infested leaves and spray with insecticides."
+    },
+    "Mango healthy": {
+        "Symptoms": "This is a healthy apple leaf.",
+        "Causes": "Not Applicable.",
+        "Cure": "Not Applicable."
+    },
+    "Mango icerya seychellarum": {
+        "Symptoms": "Leaves are eaten away by the larvae of the beetle.",
+        "Causes": "Beetle larvae.",
+        "Cure": "Remove and destroy infested leaves and spray with insecticides."
+    },
+    "Mango ischnaspis longirostris": {
+        "Symptoms": "White, waxy coverings on leaves and stems. Leaves turn yellow and die early.",
+        "Causes": "Scale insects.",
+        "Cure": "Remove and destroy infested leaves and stems. Spray with insecticides."
+    },
+    "Mango neomelicharia sparsa": {
+        "Symptoms": "Leaves are eaten away by the larvae of the beetle.",
+        "Causes": "Beetle larvae.",
+        "Cure": "Remove and destroy infested leaves and spray with insecticides."
+    }
+}
