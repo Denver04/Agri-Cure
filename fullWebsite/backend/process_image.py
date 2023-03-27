@@ -76,13 +76,14 @@ def process_image(img_path):
     }
     
     img = io.imread(img_path)
-    img = cv2.resize(img, (200,200))
+    img_cnn = cv2.resize(img,(200,200))
+    img_svm = cv2.resize(img,(100,100))
     
-    img_svm = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img_svm = cv2.cvtColor(img_svm, cv2.COLOR_BGR2GRAY)
     img_svm = np.reshape(img_svm, (1,-1))
     
     
-    with open('D:/ajhu/gfg-hackthon/fullWebsite/backend/leaf_or_not_svm', 'rb') as f:
+    with open('D:/ajhu2/gfg-hackthon/fullWebsite/backend/leaf_or_not_svm', 'rb') as f:
         model_leaf_or_not = pickle.load(f)
     f.close()
     
@@ -92,12 +93,12 @@ def process_image(img_path):
     if(isleaf == -1):
         return "Leaf not detected in the image. Please try again with a clear image of a leaf."
     else:
-        model = load_model('D:/ajhu/gfg-hackthon/fullWebsite/backend/Model_v1_resnet50_4epoch')
-        img_tensor = np.expand_dims(img, axis=0)
+        model = load_model('D:/ajhu2/gfg-hackthon/fullWebsite/backend/Model_v1_resnet50_4epoch')
+        img_tensor = np.expand_dims(img_cnn, axis=0)
         fast_pred = model(img_tensor, training=False)
         key = np.argmax(fast_pred)
         
-        with open('D:/ajhu/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
+        with open('D:/ajhu2/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
             label_mapping = json.load(f)
         f.close()
         
