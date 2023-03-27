@@ -7,6 +7,9 @@
 main{
   background-color: var(--bg);
 }
+html {
+  scroll-behavior: smooth;
+}
 :root{
   --navbg: rgb(218 211 211);
   --text: #0f0c0c; 

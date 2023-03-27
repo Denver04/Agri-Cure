@@ -60,7 +60,7 @@ function Navbar({change}) {
         setDrawer(true);
         }
     }
-
+    
   return (
     <div className={`navbar ${ mode && "dark"}`}>
         <div className={`menu-icon`} >

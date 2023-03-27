@@ -8,10 +8,15 @@
     margin-bottom: 3rem;
     flex-direction: column;
 }
-.body-up{
+.body-left{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+}
+.body-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .leftbody{
     width: 33%;
@@ -19,10 +24,10 @@
     left: 5rem;
     top: 0;
 }
-.rightup{
+.rightbody{
     width: 50%;
     position: relative;
-    left: 12rem;
+    left: 18rem;
 }
 /* .rightbody{
     position: relative;
@@ -173,6 +178,8 @@ figcaption{
     .leftbody{
         width: 90%;
         margin: auto;
+        position: unset;
+        left: 0;
     }
     .demo-fig{
         width: 90%;
@@ -195,9 +202,19 @@ figcaption{
     .body hr{
         height: 0;
     }
+    .leftbody{
+        width: 90%;
+        margin: auto;
+        position: unset;
+        left: 0;
+    }
     .rightbody{
         width: unset;
         margin-bottom: 2rem;
+        left: 0;
+    }
+    .body-left{
+        display: unset;
     }
 }
 
