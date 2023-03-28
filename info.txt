@@ -1,0 +1,104 @@
+Tea_Anthracnose
+Symptoms - Small, circular to irregular, brown spots on leaves, stems, and fruit which can enlarge and merge to cause defoliation and death of shoots
+Cause - Fungus Colletotrichum gloeosporioides
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides.
+
+Tea_algal_leaf
+Symptoms - Yellowish-green to dark green patches on the upper surface of leaves, and a slimy film on the lower surface of leaves
+Cause - Algae Cephaleuros virescens
+Cure - Pruning of the infected plant parts, and application of copper-based fungicides.
+
+Tea_bird_eye_spot
+Symptoms - Small, round to irregular, brown spots on leaves, stems, and fruit which are surrounded by yellow halos
+Cause - Fungus Cercospora spp.
+Cure - Removal and destruction of infected plant debris, and application of fungicides.
+
+Tea_brown_blight
+Symptoms - Yellow to reddish-brown circular spots on leaves, which can coalesce and cause defoliation and dieback of branches
+Cause - Fungus Pestalotiopsis spp.
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides.
+
+Tea_gray_blight
+Symptoms - Gray to brown spots on leaves, which can coalesce and cause defoliation and dieback of branches
+Cause - Fungus Pestalotiopsis spp.
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides.
+
+Tea_healthy
+Symptoms - None
+Cause - N/A
+Cure - N/A
+
+Tea_red_leaf_spot
+Symptoms - Red to brown circular spots on leaves, which can enlarge and cause defoliation and dieback of branches
+Cause - Fungus Mycosphaerella spp.
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides.
+
+Tea_white_spot
+Symptoms - White circular spots on leaves, which can enlarge and cause defoliation and dieback of branches
+Cause - Fungus Cephaleuros spp.
+Cure - Pruning of the infected plant parts, and application of copper-based fungicides.
+
+Tomato_Bacterial_spot
+Symptoms - Water-soaked lesions on leaves, stems, and fruit which can turn brown and necrotic, causing defoliation and fruit rot
+Cause - Bacteria Xanthomonas spp.
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of copper-based bactericides.
+
+Tomato_Early_blight
+Symptoms - Small, brown lesions on lower leaves, which can enlarge and cause defoliation and reduced yield
+Cause - Fungus Alternaria solani
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides.
+
+Tomato_Late_blight
+Symptoms - Water-soaked lesions on leaves, stems, and fruit which can turn brown and necrotic, causing defoliation and fruit rot
+Cause - Fungus Phytophthora infestans
+Cure - Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides.
+
+Tomato_Leaf_Mold:
+Symptoms - Yellowing and browning of the leaves, which can spread to the stems and fruit. Fuzzy greyish-brown mold may be visible on the underside of the leaves.
+Cause - Fungus (Fulvia fulva)
+Cure - Remove infected leaves and use fungicides such as chlorothalonil or copper-based fungicides.
+
+Tomato_Septoria_leaf_spot:
+Symptoms - Small brown spots on the leaves that develop yellow halos around them. These spots can merge and cause the leaves to die and fall off.
+Cause - Fungus (Septoria lycopersici)
+Cure - Remove infected leaves and use fungicides such as chlorothalonil or copper-based fungicides.
+
+Tomato_Spider_mites Two-spotted_spider_mite:
+Symptoms - Leaves develop yellow stippling or dots and become dry, brittle, and fall off. Fine webbing may be visible on the underside of the leaves.
+Cause - Mites (Tetranychus urticae)
+Cure - Use insecticides such as neem oil or pyrethrin.
+
+Tomato_Target_Spot:
+Symptoms - Brown or black spots with concentric circles on the leaves. The spots may enlarge and cause the leaves to die and fall off.
+Cause - Fungus (Corynespora cassiicola)
+Cure - Remove infected leaves and use fungicides such as chlorothalonil or copper-based fungicides.
+
+Tomato_Tomato_Yellow_Leaf_Curl_Virus:
+Symptoms - Yellowing and upward curling of the leaves. Reduced growth and yield of the plant. The fruits may have yellow spots or be misshapen.
+Cause - Virus (Begomovirus)
+Cure - There is no cure for this virus. Remove infected plants and use insecticides to control the vector (whitefly).
+
+Tomato_Tomato_mosaic_virus:
+Symptoms - Yellow mottling and mosaic patterns on the leaves. Reduced growth and yield of the plant. The fruits may be small and distorted.
+Cause - Virus (Tobamovirus)
+Cure - There is no cure for this virus. Remove infected plants and use insecticides to control the vector (aphids).
+
+Tomato_healthy:
+Symptoms - None
+Cause - None
+Cure - None
+
+Wheat_Brown_Rust:
+Symptoms - Small, circular or elongated, reddish-brown pustules on the leaves, stem, and grains. These pustules can merge and cause the leaves to die and fall off.
+Cause - Fungus (Puccinia triticina)
+Cure - Use fungicides such as propiconazole or tebuconazole.
+
+Wheat_Healthy:
+Symptoms - None
+Cause - None
+Cure - None
+
+Wheat_Yellow_Rust:
+Symptoms - Small, yellowish pustules on the leaves that turn brown and cause the leaves to die and fall off.
+Cause - Fungus (Puccinia striiformis)
+Cure - Use fungicides such as propiconazole or tebuconazole.

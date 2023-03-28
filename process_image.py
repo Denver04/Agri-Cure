@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from skimage import io
 from keras.models import load_model
 
 def process_image(img_path):
@@ -53,7 +54,7 @@ def process_image(img_path):
         42 : 'Tea_algal_leaf',
         43 : 'Tea_bird_eye_spot',
         44 : 'Tea_brown_blight',
-        45 : 'Tea_gray_light',
+        45 : 'Tea_gray_blight',
         46 : 'Tea_healthy',
         47 : 'Tea_red_leaf_spot',
         48 : 'Tea_white_spot',
@@ -71,7 +72,7 @@ def process_image(img_path):
         60 : 'Wheat_Healthy',
         61 : 'Wheat_Yellow_Rust'
     }
-    img = cv2.imread(img_path)
+    img = io.imread(img_path)
     img = cv2.resize(img, (200,200))
     img_tensor = np.expand_dims(img, axis=0)
     fast_pred = model(img_tensor, training=False)
