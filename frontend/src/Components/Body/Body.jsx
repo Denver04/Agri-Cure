@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState , useRef , useEffect } from "react";
 import "./body.css";
 import ajhu from "../../images/pfp.png";
 import demo1 from "../../images/demo1.jpg";
 import demo2 from "../../images/demo2.jpg";
 import demo3 from "../../images/demo3.jpg";
 import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";
+import { ColorRing } from "react-loader-spinner"
 import axios from "axios";
 
+
 function Body() {
+  const nav = useRef();
   const bodyvariants = {
     hidden: {
       x: "90vw",
@@ -31,10 +33,31 @@ function Body() {
   const [btn, setBtn] = useState(false);
   const [show, setShow] = useState(false);
   const [msg, setMsg] = useState("");
+  const [prediction, setPrediction] = useState({
+    Name: "",
+    Causes: "",
+    Cure: "",
+    Symptoms: "",
+  });
+  const [predictshow , setPredictShow] = useState(true);
+  const [loading , setLoading] = useState(true);
+
+  useEffect(() => {
+    // return () => {
+      nav.current.scrollIntoView();
+    // };
+  }, [msg , prediction.Name]);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  // },[]);
 
   let api = "http://127.0.0.1:8000/api";
 
   const saveImage = (e) => {
+    setLoading(false);
     console.log("saveImage");
     let formData = new FormData();
     formData.append("image", imageName);
@@ -50,20 +73,53 @@ function Body() {
       .post(api + "/images/", formData, axioConfig)
       .then((response) => {
         console.log(response.data);
-        setMsg(response.data.prediction);
+        // setMsg(response.data.prediction[0]);
+        // console.log(response.data.prediction[1].Cure);
+        if(response.data.prediction[0] !== 'L'){
+          setMsg("Result");
+          setPredictShow(true);
+          setPrediction({
+            Name: response.data.prediction[0],
+            Causes: response.data.prediction[1].Causes,
+            Cure: response.data.prediction[1].Cure,
+            Symptoms: response.data.prediction[1].Symptoms,
+          })
+        }
+        else{
+          setPredictShow(false);
+          setMsg("Leaf not found in database");
+        }
+        // setPrediction({
+        //   Causes: response.data.prediction[1].Causes,
+        //   Cure: response.data.prediction[1].Cure,
+        //   Symptoms: response.data.prediction[1].Symptoms,
+        // })
+        // .then(() => {
+        //   setShow(true);
+        //   nav.current.scrollIntoView();
+        // });
         setStatus(response.data.message, "success");
+        setLoading(true);
       })
       .catch((error) => {
         console.log(error);
         setStatus("Error while uploading image to server");
       });
+    // setLoading(true);
     setShow(true);
-    window.scrollTo(0,700);
-    // document.getElementsByClassName("prediction").scrollIntoView();
+    // setDis(true);
+    // window.scrollTo(0,1000);
   };
 
   const imageBtn = (e) => {
-    setFile(URL.createObjectURL(e.target.files[0]));
+    if(e.target.files[0] === undefined){
+      setFile(ajhu);
+    }
+    else{
+      setFile(URL.createObjectURL(e.target.files[0]));
+    }
+    // console.log((e.target.files[0]));
+    // setFile(URL.createObjectURL(e.target.files[0]));
     setBtn(true);
     setImageName(e.target.files[0]);
   };
@@ -90,18 +146,30 @@ function Body() {
             {/* <input type="submit" className="submit" value="Submit" /> */}
           </form>
           <div className="image">
-            {/* // eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-            <img className="img-prev" src={file} alt="imagess previews" />
+            <img className="img-prev" src={file} alt="preview of upload" />
           </div>
           {/* {
           btn &&  */}
-          <button
+          {
+            loading ? <button
             onClick={saveImage}
             className={`${"submit-link"} ${btn && "display"}`}
+            // disabled={dis}
           >
             Submit
-          </button>
-          {/* } */}
+          </button> : 
+          <div className="load">
+          <ColorRing
+            visible={true}
+            height="70"
+            width="70"
+            ariaLabel="blocks-loading"
+            wrapperStyle={{}}
+            wrapperClass="blocks-wrapper"
+            colors={['var(--h1)', 'var(--h1)', 'var(--h1)', 'var(--h1)', 'var(--h1)' , "var(--h1)" ]}
+          />
+          </div>
+          }
         </div>
         <hr />
         <div className="rightbody">
@@ -130,13 +198,28 @@ function Body() {
           </div>
         </div>
       </div>
-      <div className="body-right">
+      <div className="body-right" ref={nav}>
         {show && (
-          <>
-            <h1 className="prediction">
-              Name: {msg}
-            </h1>
-          </>
+          <div className="resultfromcnn" id="result">
+            <h1>{msg}</h1>
+            {
+              predictshow &&
+              <>
+              <div className="resultname">
+                <p><span>Name:</span> {prediction.Name}</p>
+              </div>
+              <div className="resultcause">
+                <p><span>Causes:</span> {prediction.Causes}</p>
+              </div>
+              <div className="resultsymptom">
+                <p><span>Symptoms:</span> {prediction.Symptoms}</p>
+              </div>
+              <div className="resultcure">
+                <p><span>Cure:</span> {prediction.Cure}</p>
+              </div>
+              </>
+            }
+          </div>
         )}
       </div>
     </motion.div>
