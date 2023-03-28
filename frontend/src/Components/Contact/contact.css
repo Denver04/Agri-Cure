@@ -47,8 +47,8 @@
 }
 .contact-form input , textarea{
     border: solid thin rgb(210, 208, 208);
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 18px;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
