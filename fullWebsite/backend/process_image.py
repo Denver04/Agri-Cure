@@ -4,7 +4,7 @@ from keras.models import load_model
 from skimage import io
 import pickle
 import json
-import random
+
 
 def process_image(img_path):
     # load model
@@ -84,7 +84,7 @@ def process_image(img_path):
         img_svm = np.reshape(img_svm, (1,-1))
         
         
-        with open('D:/ajhu2/gfg-hackthon/fullWebsite/backend/leaf_or_not_svm', 'rb') as f:
+        with open('C:/Users/User/GitHub/gfg-hackthon/fullWebsite/backend/leaf_or_not_svm', 'rb') as f:
             model_leaf_or_not = pickle.load(f)
         f.close()
         
@@ -92,17 +92,17 @@ def process_image(img_path):
         
         isleaf = model_leaf_or_not.predict(img_svm)
         if(isleaf == -1):
-            return "Leaf not detected in the image. Please try again with a clear image of a leaf."
+            return ("Leaf not detected in the image. Please try again with a clear image of a leaf.", np.random.randint(1, 1000000))
         else:
-            model = load_model('D:/ajhu2/gfg-hackthon/fullWebsite/backend/Model_v1_resnet50_4epoch')
+            model = load_model('C:/Users/User/GitHub/gfg-hackthon/fullWebsite/backend/Model_v1_resnet50_4epoch')
             img_tensor = np.expand_dims(img_cnn, axis=0)
             fast_pred = model(img_tensor, training=False)
             key = np.argmax(fast_pred)
             # print(d[key])
-            with open('D:/ajhu2/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
+            with open('C:/Users/User/GitHub/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
                 label_mapping = json.load(f)
             f.close()
             
-            return (d[key], label_mapping[d[key]], random.randint(1, 1000000))
+            return (d[key], label_mapping[d[key]], np.random.randint(1, 1000000))
     except:
-        return "Some unexpected error occurred. Please try again with a clear image of a leaf not a screenshot."
+        return ("Some unexpected error occurred. Please try again with a clear image of a leaf not a screenshot.", np.random.randint(1, 1000000))

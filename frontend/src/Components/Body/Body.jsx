@@ -40,6 +40,7 @@ function Body() {
     Symptoms: "",
     random: "",
   });
+  const [error , setError] = useState("");
   const [predictshow , setPredictShow] = useState(true);
   const [loading , setLoading] = useState(true);
 
@@ -47,13 +48,7 @@ function Body() {
     // return () => {
       nav.current.scrollIntoView();
     // };
-  }, [prediction.random]);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 5000);
-  // },[]);
+  }, [prediction.random , error]);
 
   let api = "http://127.0.0.1:8000/api";
 
@@ -75,8 +70,9 @@ function Body() {
       .then((response) => {
         // console.log(typeof(response.data.prediction));
         // setMsg(response.data.prediction[0]);
-        console.log(response.data);
-        if(typeof(response.data.prediction)!=='string'){
+        const len = Object.keys(response.data.prediction).length;
+        // console.log(Object.keys(response.data.prediction).length);
+        if(len === 3){
           setMsg("Result");
           setPredictShow(true);
           setPrediction({
@@ -89,7 +85,8 @@ function Body() {
         }
         else{
           setPredictShow(false);
-          setMsg(response.data.prediction);
+          setError(response.data.prediction[1]);
+          setMsg(response.data.prediction[0]);
         }
         // setPrediction({
         //   Causes: response.data.prediction[1].Causes,

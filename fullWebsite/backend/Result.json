@@ -105,120 +105,120 @@
         "Cure": "Remove and destroy infested leaves and spray with insecticides."
     },"Mango orthaga euadrusalis": {
         "Symptoms": "Caterpillars bore into the fruit and create feeding tunnels, causing the fruit to rot and drop prematurely. Infested fruit may also have a sticky exudate on the surface.",
-        "cause": "The mango orthaga euadrusalis is a type of caterpillar that feeds on the fruit of the mango tree.",
+        "Causes": "The mango orthaga euadrusalis is a type of caterpillar that feeds on the fruit of the mango tree.",
         "Cure": "To control infestations, apply an insecticide specifically formulated for mango trees at the appropriate time during the growing season."
     },
     
     "Mango procontarinia matteiana": {
         "Symptoms": "Infested fruit may become deformed, with dark spots or raised bumps on the surface. The flesh may be discolored and mealy, and the fruit may drop prematurely.",
-        "cause": "The mango procontarinia matteiana is a type of midge that feeds on the flowers and fruit of the mango tree.",
+        "Causes": "The mango procontarinia matteiana is a type of midge that feeds on the flowers and fruit of the mango tree.",
         "Cure": "To control infestations, apply an insecticide specifically formulated for mango trees at the appropriate time during the growing season."
     },
     
     "Mango sirmictis longicornis": {
         "Symptoms": "Infested fruit may become deformed, with raised bumps or ridges on the surface. The flesh may be discolored and mealy, and the fruit may drop prematurely.",
-        "cause": "The mango sirmictis longicornis is a type of beetle that feeds on the flowers and fruit of the mango tree.",
+        "Causes": "The mango sirmictis longicornis is a type of beetle that feeds on the flowers and fruit of the mango tree.",
         "Cure": "To control infestations, apply an insecticide specifically formulated for mango trees at the appropriate time during the growing season."
     },
     
     "Mango valanga nigricornis": {
         "Symptoms": "Infested fruit may have large, irregular holes on the surface. The flesh may be discolored and mealy, and the fruit may drop prematurely.",
-        "cause": "The mango valanga nigricornis is a type of beetle that feeds on the flowers and fruit of the mango tree.",
+        "Causes": "The mango valanga nigricornis is a type of beetle that feeds on the flowers and fruit of the mango tree.",
         "Cure": "To control infestations, apply an insecticide specifically formulated for mango trees at the appropriate time during the growing season."
     },
     
     "Orange Haunglongbing (Citrus greening)": {
         "Symptoms": "Symptoms include yellowing of leaves, asymmetrical blotchy mottling of leaves, and premature fruit drop. Infected fruit may be small, misshapen, and bitter.",
-        "cause": "The disease is caused by a bacterium called Candidatus Liberibacter asiaticus that is transmitted by the Asian citrus psyllid insect.",
+        "Causes": "The disease is caused by a bacterium called Candidatus Liberibacter asiaticus that is transmitted by the Asian citrus psyllid insect.",
         "Cure": "There is currently no Cure for citrus greening. The best way to manage the disease is to remove infected trees and use insecticides to control the Asian citrus psyllid."
     },
     
     "Peach Bacterial spot": {
         "Symptoms": "Symptoms include small, water-soaked lesions on leaves, which turn brown and eventually fall off. Lesions may also occur on fruit and twigs.",
-        "cause": "The disease is caused by the bacterium Xanthomonas arboricola pv. pruni.",
+        "Causes": "The disease is caused by the bacterium Xanthomonas arboricola pv. pruni.",
         "Cure": "To control bacterial spot, use clean pruning techniques and remove infected branches or trees. Copper-based fungicides may also be effective in controlling the disease."
     },
     
     "Peach healthy": {
         "Symptoms": "This is a healthy Peach leaf.",
-        "cause": " Not Applicable.",
+        "Causes": " Not Applicable.",
         "Cure": " Not Applicable."
     },
     
     "Pepper, bell Bacterial spot": {
             "Symptoms": "The disease primarily affects leaves and fruit of the pepper plant. Initially, small, water-soaked lesions appear on the leaves that enlarge and turn brown or black. These lesions have a yellow halo around them. On the fruit, the lesions appear as dark, sunken spots with a slightly raised margin.",
-            "cause": "The disease is caused by the bacterium Xanthomonas campestris pv. vesicatoria.",
+            "Causes": "The disease is caused by the bacterium Xanthomonas campestris pv. vesicatoria.",
             "Cure": "The disease can be controlled by planting disease-resistant varieties, avoiding overhead irrigation, and practicing good sanitation. Fungicides can be used for chemical control."
         },
         "Pepper, bell healthy": {
             "Symptoms": " This is a healthy Pepper leaf.",
-            "cause": " Not Applicable.",
+            "Causes": " Not Applicable.",
             "Cure": " Not Applicable."
         },
         "Potato Early blight": {
             "Symptoms": "The disease affects leaves, stems, and tubers of the potato plant. Symptoms on the leaves start as small, dark brown spots that grow in size and eventually form concentric rings with a target-like appearance. Stems can also be affected and show dark brown to black spots. Tubers develop a dry, sunken rot.",
-            "cause": "The disease is caused by the fungus Alternaria solani.",
+            "Causes": "The disease is caused by the fungus Alternaria solani.",
             "Cure": "The disease can be managed by planting disease-resistant varieties, rotating crops, removing infected plant debris, and applying fungicides."
         },
         "Potato Late blight": {
             "Symptoms": "The disease affects leaves, stems, and tubers of the potato plant. Symptoms on the leaves start as water-soaked spots that enlarge rapidly and turn brown. A white, fluffy growth may be visible on the undersides of the leaves under humid conditions. Stems can also be affected and show dark brown to black lesions. Infected tubers have a firm rot that can spread rapidly and turn into a soft rot.",
-            "cause": "The disease is caused by the oomycete Phytophthora infestans.",
+            "Causes": "The disease is caused by the oomycete Phytophthora infestans.",
             "Cure": "The disease can be managed by planting disease-resistant varieties, avoiding overhead irrigation, removing infected plant debris, and applying fungicides."
         },
         "Potato healthy": {
             "Symptoms": " This is a healthy Potato leaf.",
-            "cause": " Not Applicable.",
+            "Causes": " Not Applicable.",
             "Cure": " Not Applicable."
         },
         "Raspberry healthy": {
             "Symptoms": "This is a healthy Raspberry leaf.",
-            "cause": " Not Applicable.",
+            "Causes": " Not Applicable.",
             "Cure": " Not Applicable."
         },
         "Rice Bacterial leaf blight": {
             "Symptoms": "The disease affects leaves of the rice plant. Symptoms start as small, water-soaked lesions that enlarge and turn brown. Lesions may be surrounded by a yellow halo. In severe cases, leaves turn brown and wither. The disease can cause yield losses.",
-            "cause": "The disease is caused by the bacterium Xanthomonas oryzae pv. oryzae.",
+            "Causes": "The disease is caused by the bacterium Xanthomonas oryzae pv. oryzae.",
             "Cure": "The disease can be managed by planting disease-resistant varieties, avoiding overhead irrigation, removing infected plant debris, and applying copper-based bactericides."
         },
         "Rice Brown spot":
     {
     "Symptoms": "The disease affects leaves of the rice plant. Symptoms start as small, light brown lesions that enlarge and turn dark brown. Lesions may coalesce and cause the leaves to wither and die. The disease can cause yield losses.",
-    "cause": "The disease is caused by the fungus Cochliobolus miyabeanus.",
+    "Causes": "The disease is caused by the fungus Cochliobolus miyabeanus.",
     "Cure": "The disease can be managed by planting disease resistant varieties, avoiding overhead irrigation, removing infected plant debris, and applying fungicides."
     },
     
     "Rice Leaf smut":
     {
     "Symptoms": "The disease affects leaves of the rice plant. Symptoms start as small, whitish spots that enlarge and turn black. The spots coalesce to form large, irregular lesions that can cover the entire leaf. The disease can cause yield losses.",
-    "cause": "The disease is caused by the fungus Pyricularia oryzae.",
+    "Causes": "The disease is caused by the fungus Pyricularia oryzae.",
     "Cure": "The disease can be managed by planting disease resistant varieties, avoiding overhead irrigation, removing infected plant debris, and applying fungicides."
     },
     
     "Soybean healthy":
     {
     "Symptoms": " This is a healthy Soyabean leaf.",
-    "cause": " Not Applicable.",
+    "Causes": " Not Applicable.",
     "Cure": " Not Applicable."
     }
     ,
     "Squash Powdery mildew":
     {
     "Symptoms": "The disease affects leaves, stems, and fruits of the squash plant. Symptoms start as white, powdery spots on the upper surface of the leaves that can spread to the lower surface. Infected leaves can become yellow and dry. The disease can cause yield losses.",
-    "cause": "The disease is caused by the fungus Podosphaera xanthii.",
+    "Causes": "The disease is caused by the fungus Podosphaera xanthii.",
     "Cure": "The disease can be managed by planting disease resistant varieties, avoiding overhead irrigation, removing infected plant debris, and applying fungicides."
     }
     ,
     "Strawberry Leaf scorch":
     {
     "Symptoms": "The disease affects leaves of the strawberry plant. Symptoms start as small, water-soaked lesions that enlarge and turn brown. Lesions may coalesce and cause the entire leaf to turn brown and dry. The disease can cause yield losses.",
-    "cause": "The disease is caused by the fungus Diplocarpon earliana.",
+    "Causes": "The disease is caused by the fungus Diplocarpon earliana.",
     "Cure": "The disease can be managed by planting disease resistant varieties, avoiding overhead irrigation, removing infected plant debris, and applying fungicides."
     }
     ,
     "Strawberry healthy":
     {
     "Symptoms": "This is a healthy Strawberry leaf.",
-    "cause": " Not Applicable.",
+    "Causes": " Not Applicable.",
     "Cure": " Not Applicable."
     },
     "Tea Anthracnose": {
@@ -326,6 +326,4 @@
           "Cause": "Fungus (Puccinia striiformis)",
           "Cure": "Use fungicides such as propiconazole or tebuconazole."
           }
-    
-    
     }
