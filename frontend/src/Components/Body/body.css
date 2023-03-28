@@ -165,7 +165,7 @@ iframe{
 }
 figcaption{
     font-weight: bold;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.6px;
     font-size: 15px;
     text-align: center;
     color: var(--text);

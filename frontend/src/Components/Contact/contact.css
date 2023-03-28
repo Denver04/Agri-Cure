@@ -37,7 +37,7 @@
 }
 .contact-form h4{
     font-size: 50px;
-    color: var(--text);
+    color: var(--white);
 }
 .contact-form span{
     font-weight: bold;
@@ -77,6 +77,12 @@
     border: none;
     transition: all 0.5s;
 }
+.display1{
+    visibility: visible;
+    border: none;
+    margin: unset;
+    /* padding: 10px 20px; */
+}
 
 @media screen and (max-width:600px){
     .contact{
@@ -97,21 +103,20 @@
         width: 90%;
         margin: auto;
     }
-    .contact-form input, textarea{
-        padding: unset;
-    }
+    
     .send-icon{
         width: unset;
     }
-    /* .contact-form h4{
-        color: var(--bg);
-    } */
 }
 
 @media screen and (max-width:750px){
     .contact{
         position: relative;
         /* bottom: 5rem; */
+    }
+    .contact-form input, textarea{
+        padding: 5px;
+        font-size: 16px;
     }
 }
 

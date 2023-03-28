@@ -2,11 +2,12 @@
     /* position: relative; */
     width: 100%;
     height: 100%;
-    background-image: url(../../images/agri4.jpeg);
+    /* background-image: url(../../images/agri4.jpeg); */
     /* filter: grayscale(0.7); */
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-image: linear-gradient(45deg, var(--var1), var(--var2));
 }
 .home-info{
     position: relative;
@@ -26,9 +27,9 @@
     /* position: absolute; */
     top: 4rem;
     font-size: 60px;
-    color: black;
+    color: var(--drawertext);
     letter-spacing: 2px;
-    text-shadow: 5px 5px 10px #bfcafd;
+    /* text-shadow: 5px 5px 10px #bfcafd; */
 }
 .textomimage2{
     /* position: absolute; */
@@ -36,7 +37,7 @@
     font-size: 20px;
     width: 80%;
     text-align: left;
-    color: white;
+    color: var(--texton2);
     font-weight: 500;
     letter-spacing: 1px;
     /* text-shadow: 1px 1px 35px #7bed9f; */
@@ -84,12 +85,12 @@
 
 @media screen and (max-width:500px) {
     .home-info .textomimage{
-        font-size: 25px;
+        font-size: 30px;
     }
     .home-info .textomimage2{
         text-align: left;
-        font-size: 15px;
-        letter-spacing: 2px;
+        font-size: 16px;
+        letter-spacing: 1px;
     }
     .btn-link{
         width: unset;
@@ -107,12 +108,12 @@
 
 @media screen and (min-width:501px) and (max-width:768px){
     .home-info .textomimage{
-        font-size: 35px;
+        font-size: 40px;
     }
     .home-info .textomimage2{
         text-align: left;
-        font-size: 18px;
-        letter-spacing: 2px;
+        font-size: 20px;
+        letter-spacing: 1px;
     }
     .btn-link{
         width: unset;

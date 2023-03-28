@@ -1,10 +1,38 @@
-import React from 'react';
+import React , { useRef , useState } from 'react';
 import cont from "../../images/c.svg"
 import "./contact.css";
 import {motion} from "framer-motion"
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
+
+  const form = useRef();
+  const [input , setInput] = useState({
+    name:"",
+    email:"",
+    textarea:""
+  })
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_m6abes2', 'template_engpn7b', form.current, 'vqCFLk2iKYYKNXLX_')
+      .then((result) => {
+          console.log(result.text);
+          setInput({
+            name:"",
+            email:"",
+            textarea:""
+          })
+          toast.success("Your message has been sent successfully");
+      }, (error) => {
+          console.log(error.text);
+          toast.error("Oops! Something went wrong");
+      });
+  };
 
     const ContactVariants = {
         hidden:{
@@ -33,22 +61,26 @@ function Contact() {
           <div className='contact-image'>
               <img src={cont} alt="photos is here" />
           </div>
-          <div className='contact-form'>
+          <form className='contact-form' ref={form} onSubmit={sendEmail}>
               <h4>Contact Us</h4>
               <div className='input-name input'>
                   <span>Name :</span>
-                  <input type="text" required />
+                  <input type="text" required name='user_name' value={input.name} onChange={(e)=>setInput(e.target.value)} />
               </div>
               <div className='input-email input'>
                   <span>Email :</span>
-                  <input type="email" required />
+                  <input type="email" required name='user_email' value={input.email} onChange={(e)=>setInput(e.target.value)}/>
               </div>
               <div className='input-textarea input'>
                   <span>Message :</span>
-                  <textarea type="text" rows="5" cols="5" required />
+                  <textarea type="text" rows="5" cols="5" required name='message' value={input.textarea} onChange={(e)=>setInput(e.target.value)} />
               </div>
-              <Link to="/send" className='send-icon'><button className='send'>Send</button></Link>
-          </div>
+              <button className='submit-link display1' type='submit'>Send</button>
+              <ToastContainer
+              autoClose={3000}
+              theme="dark"
+              />
+          </form>
       </motion.div>
     )
   }
