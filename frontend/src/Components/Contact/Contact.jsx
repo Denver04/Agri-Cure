@@ -31,6 +31,7 @@ function Contact() {
       }, (error) => {
           console.log(error.text);
           toast.error("Oops! Something went wrong");
+          toast.info("Please try again later")
       });
   };
 

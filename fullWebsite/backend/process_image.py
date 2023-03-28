@@ -77,7 +77,7 @@ def process_image(img_path):
     }
     try:
         img = io.imread(img_path)
-        # print(img_path)
+        print(img_path)
         img_cnn = cv2.resize(img,(200,200))
         img_svm = cv2.resize(img,(100,100))
         
@@ -99,7 +99,7 @@ def process_image(img_path):
             img_tensor = np.expand_dims(img_cnn, axis=0)
             fast_pred = model(img_tensor, training=False)
             key = np.argmax(fast_pred)
-            # print(d[key])
+            print(d[key])
             with open('D:/ajhu2/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
                 label_mapping = json.load(f)
             f.close()
