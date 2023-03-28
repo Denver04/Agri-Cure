@@ -12,11 +12,12 @@ import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import CloseIcon from '@mui/icons-material/Close';
+import useLocalStorage from 'use-local-storage';
 
 function Navbar({change}) {
 
     const [drawer , setDrawer] = useState(false);
-    const [mode , setMode] = useState(true);
+    const [mode , setMode] = useLocalStorage(true);
     const openDrawer = () =>{
         setDrawer(!drawer);
         // console.log(drawer);
@@ -68,7 +69,7 @@ function Navbar({change}) {
         </div>
         <div onClick={changeMode} className='menu-icon'>
             {
-                mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
+                !mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
             }
         </div>
         {

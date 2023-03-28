@@ -177,6 +177,9 @@ figcaption , .figcaption{
     text-align: center;
     color: var(--text);
 }
+.figcaption{
+    margin-top: 3px;
+}
 .links{
     color: var(--text);
 }

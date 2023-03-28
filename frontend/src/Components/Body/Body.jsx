@@ -197,7 +197,7 @@ function Body() {
             <iframe
               title="YT link"
               src="https://youtube.com/embed/bieZ8k_s204"></iframe>
-              <p className="figcaption">Watch video for detailed instructions.</p>
+              <p className="figcaption">Watch the video for detailed instructions</p>
             </div>
           </div>
         </div>

@@ -8,10 +8,11 @@ import { AnimatePresence } from 'framer-motion';
 import Contact from './Components/Contact/Contact';
 import Footer from "./Components/footer/Footer"
 import useLocalStorage from 'use-local-storage';
+// import { useState } from 'react';
 
 function App() {
   const location = useLocation();
-  const [theme , setTheme] = useLocalStorage("theme" ? "light" : "dark")
+  const [theme , setTheme] = useLocalStorage("dark");
   const change = () =>{
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
