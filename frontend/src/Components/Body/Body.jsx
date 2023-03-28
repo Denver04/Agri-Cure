@@ -38,6 +38,7 @@ function Body() {
     Causes: "",
     Cure: "",
     Symptoms: "",
+    random: "",
   });
   const [predictshow , setPredictShow] = useState(true);
   const [loading , setLoading] = useState(true);
@@ -46,7 +47,7 @@ function Body() {
     // return () => {
       nav.current.scrollIntoView();
     // };
-  }, [msg , prediction.Name]);
+  }, [prediction.random]);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -58,7 +59,7 @@ function Body() {
 
   const saveImage = (e) => {
     setLoading(false);
-    console.log("saveImage");
+    // console.log("saveImage");
     let formData = new FormData();
     formData.append("image", imageName);
 
@@ -68,14 +69,14 @@ function Body() {
       },
     };
 
-    console.log(formData);
+    // console.log(formData);
     axios
       .post(api + "/images/", formData, axioConfig)
       .then((response) => {
-        console.log(response.data);
+        // console.log(typeof(response.data.prediction));
         // setMsg(response.data.prediction[0]);
-        // console.log(response.data.prediction[1].Cure);
-        if(response.data.prediction[0] !== 'L'){
+        console.log(response.data);
+        if(typeof(response.data.prediction)!=='string'){
           setMsg("Result");
           setPredictShow(true);
           setPrediction({
@@ -83,11 +84,12 @@ function Body() {
             Causes: response.data.prediction[1].Causes,
             Cure: response.data.prediction[1].Cure,
             Symptoms: response.data.prediction[1].Symptoms,
+            random: response.data.prediction[2],
           })
         }
         else{
           setPredictShow(false);
-          setMsg("Leaf not found in database");
+          setMsg(response.data.prediction);
         }
         // setPrediction({
         //   Causes: response.data.prediction[1].Causes,
@@ -112,15 +114,18 @@ function Body() {
   };
 
   const imageBtn = (e) => {
+    setShow(false);
+    // setMsg("");
     if(e.target.files[0] === undefined){
+      setBtn(false);
       setFile(ajhu);
     }
     else{
       setFile(URL.createObjectURL(e.target.files[0]));
+      setBtn(true);
     }
     // console.log((e.target.files[0]));
     // setFile(URL.createObjectURL(e.target.files[0]));
-    setBtn(true);
     setImageName(e.target.files[0]);
   };
 
@@ -188,7 +193,7 @@ function Body() {
             <figure className="demo-fig">
               <img className="demo-img" src={demo3} alt="clear bg" />
               <figcaption>
-                Leaf should be differentiable from the background
+                Leaf should be single/differentiable from the background
               </figcaption>
             </figure>
             <iframe
