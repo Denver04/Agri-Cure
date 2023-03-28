@@ -68,7 +68,7 @@ function Navbar({change}) {
         </div>
         <div onClick={changeMode} className='menu-icon'>
             {
-                mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
+                !mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
             }
         </div>
         {
