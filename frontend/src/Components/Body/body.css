@@ -64,8 +64,15 @@
     /* box-shadow: 1px 0px 1px 1px #05c46b; */
     outline: none;
 }
+.iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+}
 iframe{
-    width: 44%;
+    width: 86%;
     height: 30vh;
 }
 .image{
@@ -163,12 +170,15 @@ iframe{
     font-size: 20px;
     font-weight: 550;
 }
-figcaption{
+figcaption , .figcaption{
     font-weight: bold;
     letter-spacing: 0.6px;
     font-size: 15px;
     text-align: center;
     color: var(--text);
+}
+.figcaption{
+    margin-top: 3px;
 }
 .links{
     color: var(--text);
@@ -233,6 +243,11 @@ figcaption{
     .resultfromcnn p{
         font-size: 16px;
     }
+    .iframe{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:1024px){
@@ -277,5 +292,13 @@ figcaption{
     }
     .resultfromcnn p{
         font-size: 18px;
+    }
+    .iframe{
+        width: unset;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
