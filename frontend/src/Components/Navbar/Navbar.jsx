@@ -25,6 +25,7 @@ function Navbar({change}) {
     const changeMode = () =>{
        setMode(!mode);
        change(!mode);
+       console.log(mode);
     }
 
     const NavbarVariants = {
@@ -69,7 +70,7 @@ function Navbar({change}) {
         </div>
         <div onClick={changeMode} className='menu-icon'>
             {
-                !mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
+                mode ? <LightModeOutlinedIcon className='icon' /> : <DarkModeOutlinedIcon className='icon' />
             }
         </div>
         {
