@@ -91,8 +91,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 2. Install the required packages by running pip install -r requirements.txt
 3. Run python manage.py makemigrations and python manage.py migrate to create the database and apply the migrations.
 4. Use command, "django-admin createsuperuser" to create a superuser.
-5. Run python manage.py runserver to start the development server.
-6. Open http://127.0.0.1:8000/admin in your browser and login with superuser credentials to access the backend REST framework.
+5. This is an important step, you will have to change the path of the models in the process_image.py file, just navigate to the directory where you have cloned this repo, go to gfg-hackthon>fullWebite>backend>process_image.py file, there are three paths hardcoded on lines 88, 98 and 103,
+![image](https://user-images.githubusercontent.com/76547661/229268502-60e3ba42-2225-4136-a42d-068d7932899a.png)
+![image](https://user-images.githubusercontent.com/76547661/229268549-c077e1e6-8fcc-4c51-b6d9-7a9056e0cf2b.png)
+![image](https://user-images.githubusercontent.com/76547661/229268620-9b0c2cfc-8650-4961-b273-a0f754955aaa.png)
+change these paths according to your directory leading right to the models and Result file with appropriate slashes'/'.
+6. Run python manage.py runserver to start the development server.
+7. Open http://127.0.0.1:8000/admin in your browser and login with superuser credentials to access the backend REST framework.
 
 # Features
 1. User can upload an image of a leaf and get the results accordinly.
