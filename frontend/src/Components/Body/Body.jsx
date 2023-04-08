@@ -68,6 +68,7 @@ function Body() {
     axios
       .post(api + "/images/", formData, axioConfig)
       .then((response) => {
+        console.log("post req is going successfully");
         // console.log(typeof(response.data.prediction));
         // setMsg(response.data.prediction[0]);
         const len = Object.keys(response.data.prediction).length;
@@ -88,20 +89,11 @@ function Body() {
           setError(response.data.prediction[1]);
           setMsg(response.data.prediction[0]);
         }
-        // setPrediction({
-        //   Causes: response.data.prediction[1].Causes,
-        //   Cure: response.data.prediction[1].Cure,
-        //   Symptoms: response.data.prediction[1].Symptoms,
-        // })
-        // .then(() => {
-        //   setShow(true);
-        //   nav.current.scrollIntoView();
-        // });
         setStatus(response.data.message, "success");
         setLoading(true);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error , "post req is not going successfully");
         setStatus("Error while uploading image to server");
       });
     // setLoading(true);

@@ -16,7 +16,7 @@ function App() {
   const change = () =>{
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    // console.log(newTheme);
+    console.log(newTheme);
   }
   return (
     // <BrowserRouter>
