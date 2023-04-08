@@ -21,6 +21,8 @@ class ImageUploadView(viewsets.ModelViewSet):
 
         # Process the image with process_image.py
         img_path = instance.image.path
+        print('req successful')
+        
         prediction = process_image(img_path)
         
         # Delete the image file and the database entry
@@ -32,4 +34,5 @@ class ImageUploadView(viewsets.ModelViewSet):
             'prediction': prediction,
             'status': status.HTTP_201_CREATED,
         }
+        print(response_data)
         return JsonResponse(response_data)
