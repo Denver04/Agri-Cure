@@ -11,28 +11,31 @@ class ImageUploadView(viewsets.ModelViewSet):
     serializer_class = ImagesSerializer
 
     def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
+        try:
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
 
-        # Save the image to the database
-        image = serializer.validated_data['image']
-        instance = serializer.save()
+            # Save the image to the database
+            image = serializer.validated_data['image']
+            instance = serializer.save()
 
 
-        # Process the image with process_image.py
-        img_path = instance.image.path
-        print('req successful')
-        
-        prediction = process_image(img_path)
-        
-        # Delete the image file and the database entry
-        os.remove(img_path)
-        instance.delete()
+            # Process the image with process_image.py
+            img_path = instance.image.path
+            print('image path recieved and sent to process_image')
+            
+            prediction = process_image(img_path)
+            
+            # Delete the image file and the database entry
+            os.remove(img_path)
+            instance.delete()
 
-        # Return the prediction
-        response_data = {
-            'prediction': prediction,
-            'status': status.HTTP_201_CREATED,
-        }
-        print(response_data)
-        return JsonResponse(response_data)
+            # Return the prediction
+            response_data = {
+                'prediction': prediction,
+                'status': status.HTTP_201_CREATED,
+            }
+            print('prediction : ', response_data)
+            return JsonResponse(response_data)
+        except:
+            print('error in views.py in backend folder')
