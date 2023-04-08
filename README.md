@@ -5,7 +5,7 @@ Our agricultural website uses machine learning to quickly and accurately detect 
 
 
 # Installation
-Clone the repository by running git clone https://github.com/Denver04/gfg-hackathon.git in your terminal.
+Clone the repository by running git clone https://github.com/Denver04/gfg-hackthon.git in your terminal.
 
 
 # Getting Started with Create React App (frontend)
