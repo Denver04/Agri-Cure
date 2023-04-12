@@ -1,6 +1,7 @@
 from rest_framework import status, viewsets
 from django.http import JsonResponse
 from .models import Images
+import numpy as np
 from .serializers import ImagesSerializer
 from .process_image import process_image
 import os
@@ -23,6 +24,7 @@ class ImageUploadView(viewsets.ModelViewSet):
             # Process the image with process_image.py
             img_path = instance.image.path
             print('image path recieved and sent to process_image')
+            print(img_path)
             
             prediction = process_image(img_path)
             
@@ -38,4 +40,10 @@ class ImageUploadView(viewsets.ModelViewSet):
             print('prediction : ', response_data)
             return JsonResponse(response_data)
         except:
-            print('error in views.py in backend folder')
+            prediction = ("Server Error, cannot process provided image", np.random.randint(1, 1000000))
+            response_data = {
+                'prediction': prediction,
+                'status': status.HTTP_406_NOT_ACCEPTABLE,
+            }          
+            print('Server error, cannot process provided image')
+            return JsonResponse(response_data)
