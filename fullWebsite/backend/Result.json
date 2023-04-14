@@ -223,107 +223,107 @@
     },
     "Tea Anthracnose": {
         "Symptoms": "Small, circular to irregular, brown spots on leaves, stems, and fruit which can enlarge and merge to cause defoliation and death of shoots",
-        "Cause": "Fungus Colletotrichum gloeosporioides",
+        "Causes": "Fungus Colletotrichum gloeosporioides",
         "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides."
       },
       "Tea algal leaf": {
         "Symptoms": "Yellowish-green to dark green patches on the upper surface of leaves, and a slimy film on the lower surface of leaves",
-        "Cause": "Algae Cephaleuros virescens",
+        "Causes": "Algae Cephaleuros virescens",
         "Cure": "Pruning of the infected plant parts, and application of copper-based fungicides."
       },
       "Tea bird eye spot": {
         "Symptoms": "Small, round to irregular, brown spots on leaves, stems, and fruit which are surrounded by yellow halos",
-        "Cause": "Fungus Cercospora spp.",
+        "Causes": "Fungus Cercospora spp.",
         "Cure": "Removal and destruction of infected plant debris, and application of fungicides."
       },
       "Tea brown blight": {
         "Symptoms": "Yellow to reddish-brown circular spots on leaves, which can coalesce and cause defoliation and dieback of branches",
-        "Cause": "Fungus Pestalotiopsis spp.",
+        "Causes": "Fungus Pestalotiopsis spp.",
         "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides."
       },
       "Tea gray blight": {
         "Symptoms": "Gray to brown spots on leaves, which can coalesce and cause defoliation and dieback of branches",
-        "Cause": "Fungus Pestalotiopsis spp.",
+        "Causes": "Fungus Pestalotiopsis spp.",
         "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides."
       },
       "Tea healthy": {
         "Symptoms": " This is a healthy Tea leaf.",
-        "Cause": " Not Applicable.",
+        "Causes": " Not Applicable.",
         "Cure": " Not Applicable."
       },
       "Tea red leaf spot": {
         "Symptoms": "Red to brown circular spots on leaves, which can enlarge and cause defoliation and dieback of branches",
-        "Cause": "Fungus Mycosphaerella spp.",
+        "Causes": "Fungus Mycosphaerella spp.",
         "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides."
       },
       "Tea white spot": {
         "Symptoms": "White circular spots on leaves, which can enlarge and cause defoliation and dieback of branches",
-        "Cause": "Fungus Cephaleuros spp.",
+        "Causes": "Fungus Cephaleuros spp.",
         "Cure": "Pruning of the infected plant parts, and application of copper-based fungicides."
       },
       "Tomato Bacterial spot": {
           "Symptoms": "Water-soaked lesions on leaves, stems, and fruit which can turn brown and necrotic, causing defoliation and fruit rot",
-          "Cause": "Bacteria Xanthomonas spp.",
+          "Causes": "Bacteria Xanthomonas spp.",
           "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of copper-based bactericides."
         },
         "Tomato Early blight": {
           "Symptoms": "Small, brown lesions on lower leaves, which can enlarge and cause defoliation and reduced yield",
-          "Cause": "Fungus Alternaria solani",
+          "Causes": "Fungus Alternaria solani",
           "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides."
         },
         "Tomato Late blight": {
           "Symptoms": "Water-soaked lesions on leaves, stems, and fruit which can turn brown and necrotic, causing defoliation and fruit rot",
-          "Cause": "Fungus Phytophthora infestans",
+          "Causes": "Fungus Phytophthora infestans",
           "Cure": "Use of resistant cultivars, removal and destruction of infected plant debris, and application of fungicides."
         },
         "Tomato Leaf Mold": {
           "Symptoms": "Yellowing and browning of the leaves, which can spread to the stems and fruit. Fuzzy greyish-brown mold may be visible on the underside of the leaves.",
-          "Cause": "Fungus (Fulvia fulva)",
+          "Causes": "Fungus (Fulvia fulva)",
           "Cure": "Remove infected leaves and use fungicides such as chlorothalonil or copper-based fungicides."
         },
         "Tomato Septoria leaf spot": {
           "Symptoms": "Small brown spots on the leaves that develop yellow halos around them. These spots can merge and cause the leaves to die and fall off.",
-          "Cause": "Fungus (Septoria lycopersici)",
+          "Causes": "Fungus (Septoria lycopersici)",
           "Cure": "Remove infected leaves and use fungicides such as chlorothalonil or copper-based fungicides."
         },
         "Tomato Spider mites Two-spotted spider mite": {
           "Symptoms": "Leaves develop yellow stippling or dots and become dry, brittle, and fall off. Fine webbing may be visible on the underside of the leaves.",
-          "Cause": "Mites (Tetranychus urticae)",
+          "Causes": "Mites (Tetranychus urticae)",
           "Cure": "Use insecticides such as neem oil or pyrethrin."
         },
         "Tomato Target Spot": {
           "Symptoms": "Brown or black spots with concentric circles on the leaves. The spots may enlarge and cause the leaves to die and fall off.",
-          "Cause": "Fungus (Corynespora cassiicola)",
+          "Causes": "Fungus (Corynespora cassiicola)",
           "Cure": "Remove infected leaves and use fungicides such as chlorothalonil or copper-based fungicides."
         },
         "Tomato Tomato Yellow Leaf Curl Virus": {
           "Symptoms": "Yellowing and upward curling of the leaves. Reduced growth and yield of the plant. The fruits may have yellow spots or be misshapen.",
-          "Cause": "Virus (Begomovirus)",
+          "Causes": "Virus (Begomovirus)",
           "Cure": "There is no Cure for this virus. Remove infected plants and use insecticides to control the vector (whitefly)."
         },
         "Tomato Tomato mosaic virus": {
           "Symptoms": "Yellow mottling and mosaic patterns on the leaves. Reduced growth and yield of the plant. The fruits may be small and distorted.",
-          "Cause": "Virus (Tobamovirus)",
+          "Causes": "Virus (Tobamovirus)",
           "Cure": "There is no Cure for this virus. Remove infected plants and use insecticides to control the vector (aphids)."
           },
           "Tomato healthy": {
           "Symptoms": "This is a healthy Tomato leaf.",
-          "Cause": " Not Applicable.",
+          "Causes": " Not Applicable.",
           "Cure": " Not Applicable."
           },
           "Wheat Brown Rust": {
           "Symptoms": "Small, circular or elongated, reddish-brown pustules on the leaves, stem, and grains. These pustules can merge and cause the leaves to die and fall off.",
-          "Cause": "Fungus (Puccinia triticina)",
+          "Causes": "Fungus (Puccinia triticina)",
           "Cure": "Use fungicides such as propiconazole or tebuconazole."
           },
           "Wheat Healthy": {
           "Symptoms": "This is a healthy Wheat leaf.",
-          "Cause": " Not Applicable.",
+          "Causes": " Not Applicable.",
           "Cure": " Not Applicable."
           },
           "Wheat Yellow Rust": {
           "Symptoms": "Small, yellowish pustules on the leaves that turn brown and cause the leaves to die and fall off.",
-          "Cause": "Fungus (Puccinia striiformis)",
+          "Causes": "Fungus (Puccinia striiformis)",
           "Cure": "Use fungicides such as propiconazole or tebuconazole."
           }
     }
