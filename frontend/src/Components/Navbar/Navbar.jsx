@@ -25,7 +25,7 @@ function Navbar({change}) {
     const changeMode = () =>{
        setMode(!mode);
        change(!mode);
-       console.log(mode);
+    //    console.log(mode);
     }
 
     const NavbarVariants = {
@@ -35,7 +35,6 @@ function Navbar({change}) {
         visible:{
           x:0,
           transition:{duration:1 , type:"spring" , stiffness:250},
-          // transition={{delay:0.7 , duration:1 , type:"spring"}}
         },
         exit:{
           x:-10,
@@ -46,9 +45,6 @@ function Navbar({change}) {
       
     useEffect(() => {
         document.addEventListener("click" , handleOutsideClick , true)
-        // let handler = () => {
-        //     setDrawer(false);
-        // }
     } , []);
       
     const refs = useRef(null);
@@ -118,9 +114,6 @@ function Navbar({change}) {
                     Contact
                 </div>
                 </NavLink>
-                {/* <div className='drawer-links'>
-                    <button className='theme-change'>Change theme</button>
-                </div> */}
             </motion.div>
         } 
     </div>

@@ -44,7 +44,6 @@ function Contact() {
           opacity:1,
           y:0,
           transition:{delay:0.5 , duration:0.3 , type:"spring" , stiffness:80},
-          // transition={{delay:0.7 , duration:1 , type:"spring"}}
         },
         exit:{
           y:"100vh",

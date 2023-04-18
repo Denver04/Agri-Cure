@@ -45,9 +45,7 @@ function Body() {
   const [loading , setLoading] = useState(true);
 
   useEffect(() => {
-    // return () => {
       nav.current.scrollIntoView();
-    // };
   }, [prediction.random , error]);
 
   let api = "http://127.0.0.1:8000/api";
@@ -68,11 +66,8 @@ function Body() {
     axios
       .post(api + "/images/", formData, axioConfig)
       .then((response) => {
-        console.log("post req is going successfully");
-        // console.log(typeof(response.data.prediction));
-        // setMsg(response.data.prediction[0]);
+        // console.log("post req is going successfully");
         const len = Object.keys(response.data.prediction).length;
-        // console.log(Object.keys(response.data.prediction).length);
         if(len === 3){
           setMsg("Result");
           setPredictShow(true);
@@ -93,18 +88,14 @@ function Body() {
         setLoading(true);
       })
       .catch((error) => {
-        console.log(error , "post req is not going successfully");
+        // console.log(error , "post req is not going successfully");
         setStatus("Error while uploading image to server");
       });
-    // setLoading(true);
     setShow(true);
-    // setDis(true);
-    // window.scrollTo(0,1000);
   };
 
   const imageBtn = (e) => {
     setShow(false);
-    // setMsg("");
     if(e.target.files[0] === undefined){
       setBtn(false);
       setFile(ajhu);
@@ -114,7 +105,6 @@ function Body() {
       setBtn(true);
     }
     // console.log((e.target.files[0]));
-    // setFile(URL.createObjectURL(e.target.files[0]));
     setImageName(e.target.files[0]);
   };
 
@@ -137,18 +127,14 @@ function Body() {
               accept="image/*"
               required
             />
-            {/* <input type="submit" className="submit" value="Submit" /> */}
           </form>
           <div className="image">
             <img className="img-prev" src={file} alt="preview of upload" />
           </div>
-          {/* {
-          btn &&  */}
           {
             loading ? <button
             onClick={saveImage}
             className={`${"submit-link"} ${btn && "display"}`}
-            // disabled={dis}
           >
             Submit
           </button> : 

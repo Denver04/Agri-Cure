@@ -85,7 +85,7 @@ def process_image(img_path):
         img_svm = np.reshape(img_svm, (1,-1))
         
         
-        with open('D:/ajhu3/gfg-hackthon/fullWebsite/backend/leaf_or_not_svm', 'rb') as f:
+        with open('C:/Users/abhis/OneDrive/Desktop/gfg-hackthon/fullWebsite/backend/leaf_or_not_svm', 'rb') as f:
             model_leaf_or_not = pickle.load(f)
         f.close()
         
@@ -95,15 +95,15 @@ def process_image(img_path):
         if(isleaf == -1):
             return ("Leaf not detected in the image. Please try again with a clear image of a leaf.", np.random.randint(1, 1000000))
         elif (isleaf == 1):
-            model = load_model('D:/ajhu3/gfg-hackthon/fullWebsite/backend/Model_v1_resnet50_4epoch')
+            model = load_model('C:/Users/abhis/OneDrive/Desktop/gfg-hackthon/fullWebsite/backend/Model_v1_resnet50_4epoch')
             img_tensor = np.expand_dims(img_cnn, axis=0)
             fast_pred = model(img_tensor, training=False)
             key = np.argmax(fast_pred)
             print(d[key])
-            with open('D:/ajhu3/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
+            with open('C:/Users/abhis/OneDrive/Desktop/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
                 label_mapping = json.load(f)
             f.close()
-            
+            # print("me working")
             return (d[key], label_mapping[d[key]], np.random.randint(1, 1000000))
         else: 
             return ("Some unexpected error occurred(isleaf = 0). Please try again with a clear image of a leaf not a screenshot.", np.random.randint(1, 1000000))
