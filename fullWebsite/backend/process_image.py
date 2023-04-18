@@ -103,7 +103,7 @@ def process_image(img_path):
             with open('C:/Users/abhis/OneDrive/Desktop/gfg-hackthon/fullWebsite/backend/Result.json', 'r') as f:
                 label_mapping = json.load(f)
             f.close()
-            # print("me working")
+            print("return successfully")
             return (d[key], label_mapping[d[key]], np.random.randint(1, 1000000))
         else: 
             return ("Some unexpected error occurred(isleaf = 0). Please try again with a clear image of a leaf not a screenshot.", np.random.randint(1, 1000000))
