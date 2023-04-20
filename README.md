@@ -96,8 +96,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![image](https://user-images.githubusercontent.com/76547661/229268549-c077e1e6-8fcc-4c51-b6d9-7a9056e0cf2b.png)
 ![image](https://user-images.githubusercontent.com/76547661/229268620-9b0c2cfc-8650-4961-b273-a0f754955aaa.png)
 change these paths according to your directory leading right to the models and Result file with appropriate slashes'/'.
-6. Run python manage.py runserver to start the development server.
-7. Open http://127.0.0.1:8000/admin in your browser and login with superuser credentials to access the backend REST framework.
+6. Linux users might need to install a package for successful import of opencv, which can  be accomplished by running the cmd `sudo apt-get update && apt-get install libgl1`
+7. Run python manage.py runserver to start the development server.
+8. Open http://127.0.0.1:8000/admin in your browser and login with superuser credentials to access the backend REST framework.
 
 # Features
 1. User can upload an image of a leaf and get the results accordinly.
