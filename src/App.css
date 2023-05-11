@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+main{
+  background-color: var(--bg);
+}
+html {
+  scroll-behavior: smooth;
+}
+:root{
+  --navbg1: #d4d4d4;
+  --navbg2: #cdcecd;
+  --text: #0f0c0c; 
+  --navshadow: #c3c3c3;
+  --bg: rgb(241 241 241 / 1);
+  --footerbg1:#67b0c7;
+  --footerbg2: #46b884;
+  --figcaption: dimgrey;
+  --drawer: #e5e5e5;
+  --drawertext: black;
+  --drawericon: black;
+  --textshadow: rgba(95, 95, 95, 0.3);
+  --submit: #0b7f6f;
+  --submitbr: rgb(222, 218, 218);
+  --resultspan: #27ae60;
+  --h1: #0b7f6f;
+  --white: black;
+  --var1: #429cb8;
+  --var2: #42b983;
+  --texton2: black;
+}
+[theme="dark"]{
+  --navbg1: #2a2a2e;
+  --navbg2: #1e1d21;
+  --text: #efe1e1;
+  --navshadow: #616161ad;
+  --bg: #202021; 
+  --footerbg1: #1c211c;
+  --footerbg2: #4c656d;
+  --figcaption: white;
+  --drawer: rgb(48 48 49);
+  --drawertext: white;
+  --drawericon: #00ff1696;
+  --textshadow: rgb(84 81 81 / 66%);
+  --submit: #232323;
+  --submitbr: #27ae60;
+  --resultspan: #d7f3ab69;
+  --resulthead: #27ae60;
+  --h1: #44bd32;
+  --white: white;
+  --var1: #1c211c;
+  --var2: #4c656d;
+  --texton2: #bebebe;
+}
+/* rgb(14 20 27 / 1) */
+/* rgb(241 241 241 / 1) */
+/* #36393e */ 
+/* #f5fafa */

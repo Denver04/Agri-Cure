@@ -1,0 +1,130 @@
+.home{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, var(--var1), var(--var2));
+}
+.home-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 6.5rem 0;
+    gap: 3rem;
+    /* color: black; */
+}
+.home-info .textomimage{
+    /* position: absolute; */
+    top: 4rem;
+    font-size: 60px;
+    color: var(--drawertext);
+    letter-spacing: 2px;
+}
+.textomimage2{
+    top: 18rem;
+    font-size: 20px;
+    width: 80%;
+    text-align: left;
+    color: var(--texton2);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.btn-link{
+    width: 17%;
+    text-align: center;
+    padding: 15px 30px;
+    border: 2px;
+    font-size: 20px;
+    border-radius: 25px;
+    z-index: 999;
+    background-color: #8dffc6;
+    /* border: 2px solid #009432; */
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    z-index: 999;
+    margin-top: 5rem;
+}
+.btn-link:hover{
+    cursor: pointer;
+    padding: 15px 40px 15px 20px;
+}
+.btn-link:after{
+    position: absolute;
+    content: "\f061";
+    font: var(--fa-font-solid);
+    /* font-family: "FontAwesome"; */
+    top: 18px;
+    right: -2rem;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 24px;
+}
+.btn-link:hover::after{
+    right: 3.5rem;
+    top: 18px;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:500px) {
+    .home-info .textomimage{
+        font-size: 30px;
+    }
+    .home-info .textomimage2{
+        text-align: left;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .btn-link{
+        width: unset;
+    }
+    .btn-link:hover::after{
+        right: 0.5rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .home-info .textomimage{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:768px){
+    .home-info .textomimage{
+        font-size: 40px;
+    }
+    .home-info .textomimage2{
+        text-align: left;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .btn-link{
+        width: unset;
+    }
+    .btn-link:hover::after{
+        right: 0.5rem;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+    .btn-link{
+        width: unset;
+    }
+    .home-info .textomimage2{
+        text-align: left;
+        width: 95%;
+    }
+    .btn-link:hover::after{
+        right: 0.5rem;
+        top: 18px;
+        visibility: visible;
+        opacity: 1;
+    }
+}

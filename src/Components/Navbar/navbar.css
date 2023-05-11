@@ -1,0 +1,114 @@
+.navbar{
+    padding: 7px 30px;
+    background-image: linear-gradient(45deg, var(--navbg1), var(--navbg2));
+    color: var(--text);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-icon .icon{
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* width: 8%; */
+}
+.menu-icon .icon:hover{
+    background-color: var(--navshadow);
+    border-radius: 50%;
+}
+.drawer{
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    left: 0;
+    width: unset;
+    padding: 1rem 2rem;
+    top: 0rem;
+    background-color: var(--drawer);
+    /* background-color: #44bd32; */
+    align-items: center;
+    z-index: 999;
+}
+.drawer-links{
+    color: var(--drawertext);
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.linkss::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3%;
+    left: 0;
+    top: 5.2rem;
+    background-color: var(--drawertext);
+    transition: 0.5s;
+}
+.linkss:hover::before{
+    width: 100%;
+}
+.linkss{
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    /* color: #10ac84; */
+    color: black;
+    transition: 0.5s;
+}
+.linkss:hover{
+    cursor: pointer;
+    color: #10ac84;
+}
+.hovering-box{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    padding: 1px 2px;
+    border-radius: 50%;
+}
+.hovering{
+    width: 34px;
+    height: 29px;
+    display: flex;
+    transition: 0.5s;
+    margin-bottom: 0px;
+}
+.drawer-links:hover .hovering{
+    transform: translateX(-89%);
+}
+.hovering .icon ,.hovering .icon-2{
+    color: var(--drawertext);
+    font-size: 30px;
+}
+.logo-part{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo{
+    position: relative;
+    width: 25%;
+    height: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-link{
+    text-decoration: none;
+}
+.logo p{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text);
+}
+.logo img{
+    width: 30%;
+    height: 100%;
+}
