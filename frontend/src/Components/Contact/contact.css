@@ -32,7 +32,7 @@
     gap: 20px;
     padding: 1rem 0.5rem;
     /* border: 2px solid #fbf1f1; */
-    box-shadow: 2px 2px 25px #70f5a1;
+    /* box-shadow: 2px 2px 25px #70f5a1; */
 }
 .contact-form h4{
     font-size: 50px;
@@ -93,8 +93,8 @@
     .contact .contact-form{
         width: 100%;
         margin: 2rem auto;
-        background-image: linear-gradient(to top, #2ecc71 , rgba(255,0,0,0));
-        box-shadow: 2px 2px 25px #3e3e3e;
+        background-image: linear-gradient(to bottom, #2ecc71 , rgba(255,0,0,0));
+        /* box-shadow: 2px 2px 25px #3e3e3e; */
     }
     .contact-form .input{
         width: 90%;
@@ -129,8 +129,8 @@
     .contact .contact-form{
         width: 90%;
         margin: 2rem auto;
-        background-image: linear-gradient(to top, #2ecc71 , rgba(255,0,0,0));
-        box-shadow: 2px 2px 25px #3e3e3e;
+        background-image: linear-gradient(to bottom, #2ecc71 , rgba(255,0,0,0));
+        /* box-shadow: 2px 2px 25px #3e3e3e; */
     }
     .contact-form .input{
         width: 90%;

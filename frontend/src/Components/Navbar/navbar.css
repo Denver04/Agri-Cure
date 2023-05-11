@@ -1,5 +1,5 @@
 .navbar{
-    padding: 9px 30px;
+    padding: 5px 30px;
     background-image: linear-gradient(45deg, var(--navbg1), var(--navbg2));
     color: var(--text);
     z-index: 999;
