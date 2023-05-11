@@ -1,5 +1,5 @@
 .navbar{
-    padding: 12px 30px;
+    padding: 9px 30px;
     background-image: linear-gradient(45deg, var(--navbg1), var(--navbg2));
     color: var(--text);
     z-index: 999;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 .menu-icon .icon{
-    padding: 7px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 50%;
     /* width: 8%; */
@@ -127,4 +127,30 @@
 .logo img{
     width: 30%;
     height: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .navbar{
+        padding: 9px;
+    }
+    .logo-part{
+        gap: unset;
+    }
+    .logo{
+        width: unset;
+    }
+    .logo img{
+        width: 15%;
+    }
+}
+@media screen and (min-width:501px) and (max-width:768px){
+    .navbar{
+        padding: 9px 20px;
+    }
+    .logo{
+        width: unset;
+    }
+    .logo img{
+        width: 10%;
+    }
 }

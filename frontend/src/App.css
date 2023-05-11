@@ -14,8 +14,9 @@ html {
 :root{
   --navbg1: #d4d4d4;
   --navbg2: #cdcecd;
+  --cardbg: #e6e6e6;
   --text: #0f0c0c; 
-  --navshadow: #c3c3c3;
+  --navshadow: rgb(60 64 67 / 8%);
   --bg: rgb(241 241 241 / 1);
   --footerbg1:#67b0c7;
   --footerbg2: #46b884;
@@ -37,8 +38,9 @@ html {
 [theme="dark"]{
   --navbg1: #2a2a2e;
   --navbg2: #1e1d21;
+  --cardbg: #232323;
   --text: #efe1e1;
-  --navshadow: #616161ad;
+  --navshadow: #3c3c3cad;
   --bg: #202021; 
   --footerbg1: #1c211c;
   --footerbg2: #4c656d;
