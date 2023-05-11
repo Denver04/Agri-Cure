@@ -33,7 +33,7 @@
     z-index: 999;
 }
 .drawer-links{
-    color: var(--drawertext);
+    color: var(--drawertextnotactive);
     position: relative;
     padding: 2rem 0;
     display: flex;
@@ -48,7 +48,7 @@
     height: 3%;
     left: 0;
     top: 5.2rem;
-    background-color: var(--drawertext);
+    background-color: var(--drawertextnotactive);
     transition: 0.5s;
 }
 .linkss:hover::before{
@@ -66,13 +66,9 @@
     cursor: pointer;
     color: #10ac84;
 }
-.hovering-box{
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-    padding: 1px 2px;
-    border-radius: 50%;
-}
+/* .linkss.active{
+    background-color: beige;
+} */
 .hovering{
     width: 34px;
     height: 29px;
@@ -84,8 +80,30 @@
     transform: translateX(-89%);
 }
 .hovering .icon ,.hovering .icon-2{
-    color: var(--drawertext);
+    color: var(--drawertextnotactive);
     font-size: 30px;
+}
+.linkss.active .drawer-links{
+    color: var(--drawertext);
+} 
+.linkss.active .hovering{
+    transform: translateX(-89%);
+    color: var(--drawertext);
+}
+.linkss.active .hovering .icon-2{
+    /* transform: translateX(89%); */
+    color: var(--drawertext);
+}
+.linkss.active.linkss::before{
+    width: 100%;
+    background-color: var(--drawertext);
+}
+.hovering-box{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    padding: 1px 2px;
+    border-radius: 50%;
 }
 .logo-part{
     display: flex;

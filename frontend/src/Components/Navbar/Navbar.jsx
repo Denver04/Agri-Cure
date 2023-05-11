@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import  { useState , useRef , useEffect } from 'react';
 import "./navbar.css";
-import { Link } from 'react-router-dom';
+import { Link , NavLink } from 'react-router-dom';
 import {motion} from "framer-motion"
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -71,10 +71,12 @@ function Navbar({ change }) {
             <div className={`menu-icon`} >
                 <MenuIcon className='icon' onClick={openDrawer}/>
             </div>
-            <Link to="/" className='logo-link'><div className='logo'>
-                <img src={logo} alt='Logo Here' />
-                <p>Agri-Cure</p>
-            </div></Link>
+            <Link to="/" className='logo-link'>
+                <div className='logo'>
+                    <img src={logo} alt='Logo Here' />
+                    <p>Agri-Cure</p>
+                </div>
+            </Link>
         </div>
         <div onClick={changeMode} className='menu-icon'>
             {
@@ -91,7 +93,7 @@ function Navbar({ change }) {
             ref={refs}
             >
                 <div onClick={openDrawer} className='menu-icon'><CloseIcon className='icon'/></div>
-                <Link to="/" end className="linkss">
+                <NavLink to="/" end className="linkss">
                 <div className='drawer-links'>
                     <div className='hovering-box'>
                         <div className='hovering'>
@@ -101,9 +103,9 @@ function Navbar({ change }) {
                     </div>
                     Home
                 </div>
-                </Link>
+                </NavLink>
 
-                <Link to="/start" end className="linkss">
+                <NavLink to="/start" end className="linkss">
                 <div className='drawer-links'>
                     <div className='hovering-box'>
                         <div className='hovering'>
@@ -113,9 +115,9 @@ function Navbar({ change }) {
                     </div>
                     Get Started
                 </div>
-                </Link>
+                </NavLink>
 
-                <Link to="/contact" end className="linkss">
+                <NavLink to="/contact" end className="linkss">
                 <div className='drawer-links'>
                     <div className='hovering-box'>
                         <div className='hovering'>
@@ -125,7 +127,7 @@ function Navbar({ change }) {
                     </div>
                     Contact
                 </div>
-                </Link>
+                </NavLink>
                 {/* <div className='drawer-links'>
                     <button className='theme-change'>Change theme</button>
                 </div> */}

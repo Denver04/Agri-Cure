@@ -22,6 +22,7 @@ html {
   --figcaption: dimgrey;
   --drawer: #e5e5e5;
   --drawertext: black;
+  --drawertextnotactive: #4c4c4c;
   --drawericon: black;
   --textshadow: rgba(95, 95, 95, 0.3);
   --submit: #0b7f6f;
@@ -44,6 +45,7 @@ html {
   --figcaption: white;
   --drawer: rgb(48 48 49);
   --drawertext: white;
+  --drawertextnotactive : #818181;
   --drawericon: #00ff1696;
   --textshadow: rgb(84 81 81 / 66%);
   --submit: #232323;
@@ -60,3 +62,6 @@ html {
 /* rgb(241 241 241 / 1) */
 /* #36393e */ 
 /* #f5fafa */
+
+/* #9e9696 */
+/* #6e6969 */

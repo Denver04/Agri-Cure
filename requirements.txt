@@ -1,0 +1,6 @@
+tensorflow-cpu==2.10.0
+keras==2.10.0
+numpy==1.23.5
+opencv-python==4.7.0.72
+scikit-image==0.20.0
+scikit-learn==1.0.2
