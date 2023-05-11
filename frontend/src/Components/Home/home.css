@@ -12,9 +12,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 6.5rem 0 3rem;
+    padding: 6.5rem 0 6rem;
     margin-bottom: 5rem;
-    gap: 3rem;
+    gap: 2rem;
     background-image: linear-gradient(45deg, var(--var1), var(--var2));
     /* color: black; */
 }
@@ -24,6 +24,8 @@
     font-size: 60px;
     color: var(--drawertext);
     letter-spacing: 2px;
+    font-family: 'Braah One', sans-serif;
+    letter-spacing: 5px;
 }
 .textomimage2{
     top: 18rem;
@@ -50,7 +52,7 @@
     font-weight: bold;
     position: relative;
     z-index: 999;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 .btn-link:hover{
     cursor: pointer;
@@ -112,7 +114,9 @@
 
 @media screen and (max-width:500px) {
     .home-info .textomimage{
-        font-size: 30px;
+        font-size: 35px;
+        width: 50%;
+        margin: auto;
     }
     .home-info .textomimage2{
         text-align: left;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@ html {
   --navbg2: #cdcecd;
   --cardbg: #e6e6e6;
   --text: #0f0c0c; 
-  --navshadow: rgb(60 64 67 / 8%);
+  --navshadow: rgb(192 192 192);
   --bg: rgb(241 241 241 / 1);
   --footerbg1:#67b0c7;
   --footerbg2: #46b884;

@@ -160,7 +160,7 @@ function Body() {
 
           {
             !isImage && display ? 
-            <p className="alert">Please upload a image</p>
+            <p className="alert">Please upload an image</p>
             :
             <>
             {

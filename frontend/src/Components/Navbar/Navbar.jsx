@@ -36,12 +36,12 @@ function Navbar({ change }) {
         },
         visible:{
           x:0,
-          transition:{duration:1 , type:"spring" , stiffness:250},
-          // transition={{delay:0.7 , duration:1 , type:"spring"}}
+          transition:{duration:1 , type:"spring"},
+        //   transition={{delay:0.7 , duration:1 , type:"spring"}}
         },
         exit:{
           x:-10,
-          transition:{ease:"linear" , duration:1}
+          transition:{ease:"linear"}
         }
       }
 
