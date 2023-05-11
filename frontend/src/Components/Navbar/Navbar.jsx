@@ -121,8 +121,8 @@ function Navbar({ change }) {
                 <div className='drawer-links'>
                     <div className='hovering-box'>
                         <div className='hovering'>
-                            <ContactPageOutlinedIcon className='icon-2' />
-                            <ContactPageIcon className='icon' />
+                            <ContactPageOutlinedIcon className='icon' />
+                            <ContactPageIcon className='icon-2' />
                         </div>
                     </div>
                     Contact

@@ -1,10 +1,9 @@
-
 import "./home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import panda from "../../images/panda.jpg";
 
 function Home() {
-
   const containerVariants = {
     hidden: {
       y: "-100vh",
@@ -47,6 +46,82 @@ function Home() {
         <Link to="/start" className="btn-link">
           Get Started
         </Link>
+      </div>
+
+      <div className="body-info">
+        <div className="body-info-img">
+          <img
+            src={panda}
+            alt="undraw-healthy-lifestyle-6tyl"
+            border="0"
+            className="home-image"
+          />
+        </div>
+        <div className="body-info-text">
+          <h1>Agri-Cure</h1>
+          <p>
+            Discord servers are organized into topic-based channels where you
+            can collaborate, share, and just talk about your day without
+            clogging up a group chat.
+          </p>
+        </div>
+      </div>
+
+      <div className="body-info odd">
+        <div className="body-info-img">
+          <img
+            src={panda}
+            alt="undraw-healthy-lifestyle-6tyl"
+            border="0"
+            className="home-image"
+          />
+        </div>
+        <div className="body-info-text">
+          <h1>Agri-Cure</h1>
+          <p>
+            Discord servers are organized into topic-based channels where you
+            can collaborate, share, and just talk about your day without
+            clogging up a group chat.
+          </p>
+        </div>
+      </div>
+
+      <div className="body-info">
+        <div className="body-info-img">
+          <img
+            src={panda}
+            alt="undraw-healthy-lifestyle-6tyl"
+            border="0"
+            className="home-image"
+          />
+        </div>
+        <div className="body-info-text">
+          <h1>Agri-Cure</h1>
+          <p>
+            Discord servers are organized into topic-based channels where you
+            can collaborate, share, and just talk about your day without
+            clogging up a group chat.
+          </p>
+        </div>
+      </div>
+
+      <div className="body-info odd">
+        <div className="body-info-img">
+          <img
+            src={panda}
+            alt="undraw-healthy-lifestyle-6tyl"
+            border="0"
+            className="home-image"
+          />
+        </div>
+        <div className="body-info-text">
+          <h1>Agri-Cure</h1>
+          <p>
+            Discord servers are organized into topic-based channels where you
+            can collaborate, share, and just talk about your day without
+            clogging up a group chat.
+          </p>
+        </div>
       </div>
     </motion.div>
   );
