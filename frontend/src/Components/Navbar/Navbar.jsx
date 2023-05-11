@@ -105,7 +105,7 @@ function Navbar({ change }) {
                 </div>
                 </NavLink>
 
-                <NavLink to="/start" end className="linkss">
+                <NavLink to="/upload-image" end className="linkss">
                 <div className='drawer-links'>
                     <div className='hovering-box'>
                         <div className='hovering'>

@@ -29,7 +29,7 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.post('/start', upload.single('meimage') , (req, res) => {
+app.post('/upload-image', upload.single('meimage') , (req, res) => {
  
     var dataToSend;
     const python = spawn('python', ['script.py']);

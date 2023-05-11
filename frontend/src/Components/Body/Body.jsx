@@ -51,7 +51,7 @@ function Body() {
   const imageBtn = (e) => {
     setShow(false);
     // setMsg("");
-    console.log(e.target.files);
+    // console.log(e.target.files);
     // console.log(lastpart);
     if(e.target.files[0] === undefined){
       setBtn(false);
@@ -87,13 +87,13 @@ function Body() {
     // };
   }, [prediction.random , error]);
 
-  let api = "http://localhost:8000/start";
+  let api = "http://localhost:8000/upload-image";
 
   const saveImage = () => {
     setLoading(false);
     // const form = file;
     let formData = new FormData();
-    console.log(imageName);
+    // console.log(imageName);
     formData.append('meimage', imageName);
 
     // console.log(formData);

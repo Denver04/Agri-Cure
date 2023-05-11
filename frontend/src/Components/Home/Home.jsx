@@ -31,7 +31,7 @@ function Home() {
     >
       <div className="home-info">
         <h1 id="simple_arc" className="textomimage">
-          Agri-Cure
+        GET THE CURE ...
         </h1>
         <p className="textomimage2">
           Welcome to our innovative agricultural website! We are revolutionizing

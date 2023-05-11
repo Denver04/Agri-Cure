@@ -30,7 +30,7 @@ function App() {
       <ScrolTop />
       <Routes location={location} key={location.key}>
         <Route path='/' element={<Home />} />
-        <Route path='/start' element={<Body />} />
+        <Route path='/upload-image' element={<Body />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       {/* <Footer /> */}

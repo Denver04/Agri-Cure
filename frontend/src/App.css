@@ -42,7 +42,7 @@ html {
   --text: #efe1e1;
   --navshadow: #3c3c3cad;
   --bg: #202021; 
-  --footerbg1: #1c211c;
+  --footerbg1: #2b2b2b;
   --footerbg2: #4c656d;
   --figcaption: white;
   --drawer: rgb(48 48 49);
@@ -56,7 +56,7 @@ html {
   --resulthead: #27ae60;
   --h1: #44bd32;
   --white: white;
-  --var1: #1c211c;
+  --var1: #2b2b2b;
   --var2: #4c656d;
   --texton2: #bebebe;
 }
