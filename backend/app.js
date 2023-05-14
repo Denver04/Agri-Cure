@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage : storage})
 
-app.use((req,res,next)=>{
+app.use((req,res,next)=>{ //cors
     res.setHeader("Access-Control-Allow-Origin" , '*');
     res.setHeader("Access-COntrol-Allow-Headers",
     'Origin, X-Requested-With, Content-Type, Accept, Authorization'

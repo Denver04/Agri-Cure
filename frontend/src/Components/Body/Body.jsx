@@ -8,9 +8,12 @@ import panda from "../../images/panda.jpg";
 import { motion } from "framer-motion";
 import { ColorRing } from "react-loader-spinner"
 import axios from "axios";
+import { data } from "../Data/data.js"
+import { information } from "../Data/Information"
 // import res from "express/lib/response";
 
 function Body() {
+
   const ref = useRef();
   const nav = useRef();
   const bodyvariants = {
@@ -29,6 +32,8 @@ function Body() {
     },
   };
 
+  const [ json ] = useState(data);
+  const [ disease ] = useState(information)
   const [imageName, setImageName] = useState("");
   const [file, setFile] = useState(ajhu);
   const [, setStatus] = useState("");
@@ -62,7 +67,7 @@ function Body() {
     else{
       const lastpart = (e.target.files[0]).name.split(".").pop();
       const lower_last = lastpart.toLowerCase();
-      if(lower_last === "jpg" || lower_last === "jpeg" || lower_last === "png"){
+      if(lower_last === "jpg" || lower_last === "jpeg" || lower_last === "png" || lower_last === "webp"){
         setIsImage(true);
         setDisplay(false);
         setFile(URL.createObjectURL(e.target.files[0]));
@@ -100,25 +105,28 @@ function Body() {
     axios.post(api, formData)
       .then((response) => {
       // setJson(response.json)
-      const arr2 = response.data.split("__");
-        const len = arr2.length;
-        // console.log(typeof response.data);
-        // console.log(Object.keys(response.data.prediction).length);
-        if(len === 5){
+      const value = response.data;
+      // console.log(value);
+      const disease_name = json[value];
+      const randomNum = Math.floor(Math.random() * 100000) + 1;
+      // console.log(disease_name);
+      // console.log(information);
+        // const arr2 = response.data.split("__");
+        if(value <= 61){
           setMsg("Result");
           setPredictShow(true);
           setPrediction({
-            Name: arr2[0],
-            Symptoms: arr2[1],
-            Causes: arr2[2],
-            Cure: arr2[3],
-            random: arr2[4],
+            Name: disease_name,
+            Symptoms: disease[disease_name].Symptoms,
+            Causes: disease[disease_name].Causes,
+            Cure: disease[disease_name].Cure,
+            random: randomNum,
           })
         }
         else{
           setPredictShow(false);
-          setError(arr2[1]);
-          setMsg(arr2[0]);
+          setError(randomNum);
+          setMsg(disease_name);
         }
         // setStatus(response.data.message, "success");
         setLoading(true);
@@ -128,7 +136,6 @@ function Body() {
         console.log(error);
         setStatus("Error while uploading image to server");
       });
-    // setLoading(true);
     setShow(true);
   };
 

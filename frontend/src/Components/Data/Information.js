@@ -1,4 +1,4 @@
-{
+export const information = {
     "Apple scab": {
         "Symptoms": "Olive-green spots on leaves which later turn brown and velvety. Fruits have scabby spots.",
         "Causes": "Fungus.",
@@ -326,4 +326,4 @@
           "Causes": "Fungus (Puccinia striiformis)",
           "Cure": "Use fungicides such as propiconazole or tebuconazole."
           }
-    }
+        }

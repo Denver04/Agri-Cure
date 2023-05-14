@@ -16,7 +16,7 @@ function Home() {
       // transition={{delay:0.7 , duration:1 , type:"spring"}}
     },
     exit: {
-      y: "-100vh",
+      y: "0vh",
       transition: { ease: "easeInOut" },
     },
   };
@@ -43,7 +43,7 @@ function Home() {
           and increase yields, ultimately contributing to a more sustainable and
           prosperous agricultural industry.
         </p>
-        <Link to="/start" className="btn-link">
+        <Link to="/upload-image" className="btn-link">
           Get Started
         </Link>
       </div>
