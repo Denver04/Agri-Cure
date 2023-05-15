@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import  { useState , useRef , useEffect } from 'react';
+import React , { useRef , useEffect } from 'react';
 import "./navbar.css";
 import { Link , NavLink } from 'react-router-dom';
 import {motion} from "framer-motion"
@@ -15,14 +15,17 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import useLocalStorage from 'use-local-storage';
 import logo from "../../images/fav.png"
+import { drawerContext } from '../Context/Drawer';
 
 function Navbar({ change }) {
 
-    const [drawer , setDrawer] = useState(false);
+    const { leftmenu , updateLeftmenu } = React.useContext(drawerContext);
+
+    // const [drawer , setDrawer] = useState(false);
     const [mode , setMode] = useLocalStorage("theme", true);
     const openDrawer = () =>{
-        setDrawer(!drawer);
-        // console.log(drawer);
+        // setDrawer(!drawer);
+        updateLeftmenu(!leftmenu); 
     }
     const changeMode = () =>{
        setMode(!mode);
@@ -45,25 +48,22 @@ function Navbar({ change }) {
         }
       }
 
-      
-    useEffect(() => {
-        document.addEventListener("click" , handleOutsideClick , true)
-        // let handler = () => {
-        //     setDrawer(false);
-        // }
-    } , []);
-      
     const refs = useRef(null);
             
     const handleOutsideClick = (e) => {
     const element = refs.current;
         if(element!==e.target){
-            setDrawer(false);
+            updateLeftmenu(false);
         }
         else{
-            setDrawer(true);
+            updateLeftmenu(true);
         }
     }
+    useEffect(() => {
+        document.addEventListener("click" , handleOutsideClick , true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    } , []);
+      
     
   return (
     <div className={`navbar ${ mode && "dark"}`}>
@@ -84,7 +84,7 @@ function Navbar({ change }) {
             }
         </div>
         {
-            drawer && 
+            leftmenu && 
             <motion.div className='drawer'
             variants={NavbarVariants}
             initial="hidden"

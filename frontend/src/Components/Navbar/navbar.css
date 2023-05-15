@@ -33,6 +33,7 @@
     /* background-color: #44bd32; */
     align-items: center;
     z-index: 999;
+    opacity: 1;
 }
 .drawer-links{
     color: var(--drawertextnotactive);
@@ -47,9 +48,9 @@
     content: "";
     position: absolute;
     width: 0%;
-    height: 3%;
+    height: 2.5%;
     left: 0;
-    top: 5.2rem;
+    top: 5.25rem;
     background-color: var(--drawertextnotactive);
     transition: 0.5s;
 }

@@ -24,7 +24,7 @@ html {
   --figcaption: dimgrey;
   --drawer: #e5e5e5;
   --drawertext: black;
-  --drawertextnotactive: #7e7e7e;
+  --drawertextnotactive: #181717d1;
   --drawericon: black;
   --textshadow: rgba(95, 95, 95, 0.3);
   --submit: #0b7f6f;
@@ -48,7 +48,7 @@ html {
   --figcaption: white;
   --drawer: rgb(48 48 49);
   --drawertext: white;
-  --drawertextnotactive : #818181;
+  --drawertextnotactive : #c1c1c1d1;
   --drawericon: #00ff1696;
   --textshadow: rgb(84 81 81 / 66%);
   --submit: #232323;
@@ -61,7 +61,10 @@ html {
   --var2: #4c656d;
   --texton2: #bebebe;
 }
-
+.light-bg{
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
+}
 /* rgb(14 20 27 / 1) */
 /* rgb(241 241 241 / 1) */
 /* #36393e */ 

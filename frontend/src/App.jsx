@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css'
 import Navbar from './Components/Navbar/Navbar';
 import Body from './Components/Body/Body';
@@ -8,9 +9,12 @@ import { AnimatePresence } from 'framer-motion';
 import Contact from './Components/Contact/Contact';
 import Footer from "./Components/footer/Footer"
 import useLocalStorage from 'use-local-storage';
+import { drawerContext } from './Components/Context/Drawer';
 // import { useState } from 'react';
 
 function App() {
+
+  const { leftmenu } = React.useContext(drawerContext);
   const location = useLocation();
   const [theme , setTheme] = useLocalStorage("dark");
   const change = (bool) =>{
@@ -24,15 +28,17 @@ function App() {
   return (
     // <BrowserRouter>
     // eslint-disable-next-line react/no-unknown-property
-    <main theme={theme}>
+    <main theme={theme} >
     <AnimatePresence>
       <Navbar change={change}/>
       <ScrolTop />
-      <Routes location={location} key={location.key}>
-        <Route path='/' element={<Home />} />
-        <Route path='/upload-image' element={<Body />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+      <div className={leftmenu && "light-bg"}>
+        <Routes location={location} key={location.key}>
+          <Route path='/' element={<Home />} />
+          <Route path='/upload-image' element={<Body />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </div>
       {/* <Footer /> */}
       <ScrolTop />
       <Footer />
