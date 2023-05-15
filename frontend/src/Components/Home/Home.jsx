@@ -2,14 +2,13 @@ import "./home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import panda from "../../images/panda.jpg";
-import Aos from 'aos';
-import "aos/dist/aos.css"
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 function Home() {
-
   useEffect(() => {
-    Aos.init({duration:800})
+    Aos.init({ duration: 800 });
   }, []);
 
   const containerVariants = {
@@ -39,7 +38,7 @@ function Home() {
     >
       <div className="home-info">
         <h1 id="simple_arc" className="textomimage">
-        GET THE CURE ...
+          GET THE CURE ...
         </h1>
         <p className="textomimage2">
           Welcome to our innovative agricultural website! We are revolutionizing
@@ -66,16 +65,17 @@ function Home() {
           />
         </div>
         <div className="body-info-text">
-          <h1>Agri-Cure</h1>
+          <h1>Impact on Economy ...</h1>
           <p>
-            Discord servers are organized into topic-based channels where you
-            can collaborate, share, and just talk about your day without
-            clogging up a group chat.
+            The agricultural sector in India and worldwide incurs annual losses
+            of $12 billion and $220 billion, respectively. This leads to
+            increment in price of the crops and also the farmers are not able to
+            get the desired profit.
           </p>
         </div>
       </div>
 
-      <div className="body-info odd" >
+      <div className="body-info odd">
         <div className="body-info-img" data-aos="fade-left">
           <img
             src={panda}
@@ -85,11 +85,11 @@ function Home() {
           />
         </div>
         <div className="body-info-text">
-          <h1>Agri-Cure</h1>
+          <h1>Impact on farmers ...</h1>
           <p>
-            Discord servers are organized into topic-based channels where you
-            can collaborate, share, and just talk about your day without
-            clogging up a group chat.
+            Plant diseases also have a negative impact on farmers incomes and
+            livelihoods. These diseases can cause significant crop losses, which
+            can lead to food shortages
           </p>
         </div>
       </div>
@@ -104,11 +104,10 @@ function Home() {
           />
         </div>
         <div className="body-info-text">
-          <h1>Agri-Cure</h1>
+          <h1>Revolutionizing Plant Health ...</h1>
           <p>
-            Discord servers are organized into topic-based channels where you
-            can collaborate, share, and just talk about your day without
-            clogging up a group chat.
+            We leverage the power of machine learning to detect deformities and
+            diseases in plants. We are working towards a healthy future.
           </p>
         </div>
       </div>
