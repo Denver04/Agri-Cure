@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function Home() {
   useEffect(() => {
-    Aos.init({ duration: 800 });
+    Aos.init({ duration: 1000 });
   }, []);
 
   const containerVariants = {
