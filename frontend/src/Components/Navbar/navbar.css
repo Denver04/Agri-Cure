@@ -2,10 +2,12 @@
     padding: 5px 30px;
     background-image: linear-gradient(45deg, var(--navbg1), var(--navbg2));
     color: var(--text);
-    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.menu-icon{
+    z-index: 999;
 }
 .menu-icon .icon{
     padding: 10px;
@@ -107,6 +109,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    z-index: 999;
 }
 .logo{
     position: relative;

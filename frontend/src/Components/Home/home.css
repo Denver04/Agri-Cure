@@ -3,6 +3,9 @@
     height: 100%;
     /* background-image: linear-gradient(45deg, var(--var1), var(--var2)); */
 }
+.home .body-info{
+    display: flex;
+}
 .home-info{
     position: relative;
     display: flex;
@@ -15,8 +18,23 @@
     padding: 6.5rem 0 6rem;
     margin-bottom: 5rem;
     gap: 2rem;
-    background-image: linear-gradient(45deg, var(--var1), var(--var2));
+    overflow: hidden;
+    /* background-image: linear-gradient(45deg, var(--var1), var(--var2)); */
     /* color: black; */
+}
+.home-info::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* background-color: rgb(65, 247, 183); */
+    background-image: linear-gradient(45deg, var(--var1), var(--var2));
+    transform-origin: bottom;
+    transform: translateX(0%) scale(2);
+    z-index: -9999;
 }
 .home-info .textomimage{
     /* position: absolute; */
@@ -88,6 +106,9 @@
     gap: 10rem;
     color: var(--text);
 }
+.body-info div{
+    display: flex;
+}
 .odd{
     flex-direction: row-reverse;
     background-color: var(--cardbg);
@@ -115,13 +136,16 @@
 @media screen and (max-width:500px) {
     .home-info .textomimage{
         font-size: 35px;
-        width: 50%;
+        width: 65%;
         margin: auto;
     }
     .home-info .textomimage2{
         text-align: left;
         font-size: 16px;
         letter-spacing: 1px;
+    }
+    .home-info::before{
+        border-radius: 0%;
     }
     .btn-link{
         width: unset;
@@ -135,7 +159,7 @@
         padding: 5rem 0rem;
     }
     .body-info-img{
-        width: 90%;
+        width: 80%;
         height: 100%;
         margin: auto;
     }
@@ -160,6 +184,9 @@
         text-align: left;
         font-size: 20px;
         letter-spacing: 1px;
+    }
+    .home-info::before{
+        transform: translateX(0%) scale(4);
     }
     .btn-link{
         width: unset;
@@ -191,6 +218,9 @@
     .home-info .textomimage2{
         text-align: left;
         width: 95%;
+    }
+    .home-info::before{
+        transform: translateX(-1%) scale(4);
     }
     .btn-link:hover::after{
         right: 0.5rem;

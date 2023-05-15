@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function Home() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1200 });
   }, []);
 
   const containerVariants = {
@@ -56,7 +56,7 @@ function Home() {
       </div>
 
       <div className="body-info">
-        <div className="body-info-img" data-aos="fade-right">
+        <div className="body-info-img" data-aos="zoom-in">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
@@ -76,7 +76,7 @@ function Home() {
       </div>
 
       <div className="body-info odd">
-        <div className="body-info-img" data-aos="fade-left">
+        <div className="body-info-img" data-aos="zoom-in">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
@@ -95,7 +95,7 @@ function Home() {
       </div>
 
       <div className="body-info">
-        <div className="body-info-img" data-aos="fade-right">
+        <div className="body-info-img" data-aos="zoom-in">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
@@ -113,7 +113,7 @@ function Home() {
       </div>
 
       <div className="body-info odd">
-        <div className="body-info-img" data-aos="fade-left">
+        <div className="body-info-img" data-aos="zoom-in">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
