@@ -2,8 +2,16 @@ import "./home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import panda from "../../images/panda.jpg";
+import Aos from 'aos';
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 function Home() {
+
+  useEffect(() => {
+    Aos.init({duration:800})
+  }, []);
+
   const containerVariants = {
     hidden: {
       y: "-100vh",
@@ -49,7 +57,7 @@ function Home() {
       </div>
 
       <div className="body-info">
-        <div className="body-info-img">
+        <div className="body-info-img" data-aos="fade-right">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
@@ -67,8 +75,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="body-info odd">
-        <div className="body-info-img">
+      <div className="body-info odd" >
+        <div className="body-info-img" data-aos="fade-left">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
@@ -87,7 +95,7 @@ function Home() {
       </div>
 
       <div className="body-info">
-        <div className="body-info-img">
+        <div className="body-info-img" data-aos="fade-right">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
@@ -106,7 +114,7 @@ function Home() {
       </div>
 
       <div className="body-info odd">
-        <div className="body-info-img">
+        <div className="body-info-img" data-aos="fade-left">
           <img
             src={panda}
             alt="undraw-healthy-lifestyle-6tyl"
