@@ -1,4 +1,4 @@
-import { useState , useRef , useEffect } from "react";
+import { useState , useRef } from "react";
 import "./body.css";
 import ajhu from "../../images/pfp.png";
 import demo1 from "../../images/demo1.jpg";
@@ -45,9 +45,7 @@ function Body() {
     Causes: "",
     Cure: "",
     Symptoms: "",
-    random: "",
   });
-  const [error , setError] = useState("");
   const [predictshow , setPredictShow] = useState(true);
   const [loading , setLoading] = useState(true);
   const [isImage , setIsImage] = useState(false);
@@ -56,8 +54,6 @@ function Body() {
   const imageBtn = (e) => {
     setShow(false);
     // setMsg("");
-    // console.log(e.target.files);
-    // console.log(lastpart);
     if(e.target.files[0] === undefined){
       setBtn(false);
       setFile(ajhu);
@@ -80,23 +76,13 @@ function Body() {
       }
       // setIsImage(true);
     }
-    // console.log((e.target.files[0]).name);
-    // setFile(URL.createObjectURL(e.target.files[0]));
     setImageName(e.target.files[0]);
   };
-
-
-  useEffect(() => {
-    // return () => {
-      nav.current.scrollIntoView();
-    // };
-  }, [prediction.random , error]);
 
   let api = "http://localhost:8000/upload-image";
 
   const saveImage = () => {
     setLoading(false);
-    // const form = file;
     let formData = new FormData();
     // console.log(imageName);
     formData.append('meimage', imageName);
@@ -104,14 +90,8 @@ function Body() {
     // console.log(formData);
     axios.post(api, formData)
       .then((response) => {
-      // setJson(response.json)
       const value = response.data;
-      // console.log(value);
       const disease_name = json[value];
-      const randomNum = Math.floor(Math.random() * 100000) + 1;
-      // console.log(disease_name);
-      // console.log(information);
-        // const arr2 = response.data.split("__");
         if(value <= 61){
           setMsg("Result");
           setPredictShow(true);
@@ -120,15 +100,14 @@ function Body() {
             Symptoms: disease[disease_name].Symptoms,
             Causes: disease[disease_name].Causes,
             Cure: disease[disease_name].Cure,
-            random: randomNum,
           })
         }
         else{
           setPredictShow(false);
-          setError(randomNum);
           setMsg(disease_name);
         }
         // setStatus(response.data.message, "success");
+        nav.current.scrollIntoView();
         setLoading(true);
       })
       .catch((error) => {
