@@ -1,24 +1,42 @@
 import os
 import cv2
+from sys import exit
 import numpy as np
 from keras.models import load_model
 from skimage import io
+import shutil
 # import pickle
 # import json
 from ultralytics import YOLO
 
-parent_dir = os.getcwd()
+parent_dir = os.getcwd() # your directory path
+dir = '../frontend/src/saves' # saves directory path
+        
+save_dir = os.path.join(parent_dir, dir) # absolute path of saves directory
 
-for _,_,files in os.walk('uploads', topdown=True):
+if os.path.exists(save_dir):
+    limit = len( os.listdir(save_dir))
+    if limit > 10:
+        shutil.rmtree(save_dir)
+
+img_dir = os.path.join(parent_dir, 'uploads') # absolute path of uploads directory
+if not os.path.exists(img_dir) or len(os.listdir(img_dir)) == 0:
+    print(69)
+    exit(0)
+for _,_,files in os.walk(img_dir, topdown=True):
         # print (files)
+        # print(len(files))
         for file in files:
                 img_name = file
-                img = io.imread(os.path.join('uploads', file))
+                img = io.imread(os.path.join(img_dir, file))
                 # print(img)
-                os.remove(os.path.join('uploads', file))
+                os.remove(os.path.join(img_dir, file))
 
 def process_image(img):   
-    # mapping dict
+    '''
+    This function takes in an image and returns the predicted class of the image.
+    img : numpy ndarray
+    returns : int'''
     
     try:   
         img_cnn = cv2.resize(img,(200,200))
@@ -27,9 +45,9 @@ def process_image(img):
         # img_svm = cv2.cvtColor(img_svm, cv2.COLOR_BGR2GRAY)
         # img_svm = np.reshape(img_svm, (1,-1))
         #--------------------------YOLO---------------------------------
-        dir = '../frontend/src/saves'
+        # dir = '../frontend/src/saves'
         # parent_dir = os.getcwd()
-        save_dir = os.path.join(parent_dir, dir)
+        # save_dir = os.path.join(parent_dir, dir)
         yolo = YOLO('best.pt')
         yolo_output = yolo.predict(source=img, save = False)
         if yolo_output[0].__len__() == 0:
@@ -89,5 +107,5 @@ def process_image(img):
 
 
 zee = process_image(img)
-    # print(zee , "huadad")
+    
 print(zee)
