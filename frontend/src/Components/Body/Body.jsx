@@ -83,6 +83,7 @@ function Body() {
 
   const saveImage = () => {
     setLoading(false);
+    // setDis(false);
     let formData = new FormData();
     // console.log(imageName);
     formData.append('meimage', imageName);
@@ -90,9 +91,14 @@ function Body() {
     // console.log(formData);
     axios.post(api, formData)
       .then((response) => {
-      const value = response.data;
+      const path = `/src/saves/${response.data["image"]}`;
+      // setFile(path);
+      
+      const value = parseInt(response.data["number"]);
       const disease_name = json[value];
+        // console.log(disease_name);
         if(value <= 61){
+          setFile(path);
           setMsg("Result");
           setPredictShow(true);
           setPrediction({
@@ -102,7 +108,12 @@ function Body() {
             Cure: disease[disease_name].Cure,
           })
         }
+        else if(value === 62){
+          setPredictShow(false);
+          setMsg(disease_name);
+        }
         else{
+          setFile(path);
           setPredictShow(false);
           setMsg(disease_name);
         }
@@ -151,13 +162,12 @@ function Body() {
             <>
             {
               loading ?
-              <button
+            <button
               onClick={saveImage}
               className={`${"submit-link"} ${btn && isImage && "display"}`}
-              // disabled={dis}
             >
               Submit
-            </button> : 
+            </button> :
             <div className="load">
             <ColorRing
               visible={true}

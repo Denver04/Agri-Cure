@@ -17,28 +17,17 @@ for _,_,files in os.walk('uploads', topdown=True):
                 # print(img)
                 os.remove(os.path.join('uploads', file))
 
-
-    
-
-
-
-
-def process_image(img):
-    
-    
-    
+def process_image(img):   
     # mapping dict
     
-    try:
-        
-        
+    try:   
         img_cnn = cv2.resize(img,(200,200))
         # img_svm = cv2.resize(img,(100,100))
         
         # img_svm = cv2.cvtColor(img_svm, cv2.COLOR_BGR2GRAY)
         # img_svm = np.reshape(img_svm, (1,-1))
         #--------------------------YOLO---------------------------------
-        dir = 'saves'
+        dir = '../frontend/src/saves'
         # parent_dir = os.getcwd()
         save_dir = os.path.join(parent_dir, dir)
         yolo = YOLO('best.pt')
@@ -46,6 +35,14 @@ def process_image(img):
         if yolo_output[0].__len__() == 0:
             return 62
         elif yolo_output[0].__len__() > 1:
+            if not os.path.exists(save_dir):
+                os.mkdir(save_dir)
+                
+            os.chdir(save_dir)
+            box_img = yolo_output[0].plot(pil=True, conf=False)
+            cv2.imwrite(img_name, box_img)
+            os.chdir(parent_dir)  
+        
             return 65
         else:
             if not os.path.exists(save_dir):
@@ -54,12 +51,7 @@ def process_image(img):
             os.chdir(save_dir)
             box_img = yolo_output[0].plot(pil=True, conf=False)
             cv2.imwrite(img_name, box_img)
-            os.chdir(parent_dir)
-                
-                
-            
-        
-        
+            os.chdir(parent_dir)  
         
         #--------------------------YOLO---------------------------------
         
@@ -85,10 +77,7 @@ def process_image(img):
                 # f.close()
                 # out_dict[d[key]] = label_mapping[d[key]]
                 # return out_dict,np.random.randint(1, 1000000)
-            return (key)
-            
-                
-                
+            return (key)         
         # else:
             # out_dict["Some unexpected error occurred(isleaf = 0). Please try again with a clear image of a leaf not a screenshot."] = np.random.randint(1, 1000000) 
             # return out_dict
