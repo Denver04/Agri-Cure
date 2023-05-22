@@ -63,7 +63,8 @@ export const data =
     60: "Wheat Healthy",
     61: "Wheat Yellow Rust",
     62: "Leaf not detected in the Image",
-    63: "Some unexpected error occurred, Try again later",
+    // 63: "Some unexpected error occurred, Try again later",
     64: "Image not found or Internal Server Error",
+    65: "Multiple Leaves detected, Please make sure the leaf is distinct and clear",
 }
 
