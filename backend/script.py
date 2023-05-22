@@ -3,8 +3,8 @@ import cv2
 import numpy as np
 from keras.models import load_model
 from skimage import io
-import pickle
-import json
+# import pickle
+# import json
 from ultralytics import YOLO
 
 parent_dir = os.getcwd()
