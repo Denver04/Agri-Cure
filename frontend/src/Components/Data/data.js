@@ -64,7 +64,8 @@ export const data =
     61: "Wheat Yellow Rust",
     62: "Leaf not detected in the Image",
     // 63: "Some unexpected error occurred, Try again later",
-    64: "Image not found or Internal Server Error",
+    64: "Internal Server Error, Please do not upload a screenshot",
     65: "Multiple Leaves detected, Please make sure the leaf is distinct and clear",
+    69: "Image not found",
 }
 

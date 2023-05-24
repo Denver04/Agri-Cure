@@ -30,7 +30,8 @@ for _,_,files in os.walk(img_dir, topdown=True):
                 img_name = file
                 img = io.imread(os.path.join(img_dir, file))
                 # print(img)
-                os.remove(os.path.join(img_dir, file))
+                img_path = os.path.join(img_dir, file)
+                # os.remove(os.path.join(img_dir, file))
 
 def process_image(img):   
     '''
@@ -48,8 +49,9 @@ def process_image(img):
         # dir = '../frontend/src/saves'
         # parent_dir = os.getcwd()
         # save_dir = os.path.join(parent_dir, dir)
-        yolo = YOLO('best.pt')
-        yolo_output = yolo.predict(source=img, save = False)
+        yolo = YOLO('final.pt')
+        yolo_output = yolo.predict(source=img_path, conf=0.9, save = False)
+        os.remove(os.path.join(img_dir, file))
         if yolo_output[0].__len__() == 0:
             return 62
         elif yolo_output[0].__len__() > 1:
@@ -103,6 +105,7 @@ def process_image(img):
     except:
         # out_dict["Some unexpected error occurred. Please try again with a clear image of a leaf not a screenshot."] = np.random.randint(1, 1000000)
         # return out_dict
+        
         return (64)
 
 
