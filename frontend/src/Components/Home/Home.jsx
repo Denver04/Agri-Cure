@@ -1,7 +1,9 @@
 import "./home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import panda from "../../images/panda.jpg";
+import stat1 from "../../images/stat1.png";
+import stat2 from "../../images/stat2.jpg";
+import stat3 from "../../images/stat3.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -58,7 +60,7 @@ function Home() {
       <div className="body-info">
         <div className="body-info-img" data-aos="zoom-in">
           <img
-            src={panda}
+            src={stat1}
             alt="undraw-healthy-lifestyle-6tyl"
             border="0"
             className="home-image"
@@ -78,7 +80,7 @@ function Home() {
       <div className="body-info odd">
         <div className="body-info-img" data-aos="zoom-in">
           <img
-            src={panda}
+            src={stat2}
             alt="undraw-healthy-lifestyle-6tyl"
             border="0"
             className="home-image"
@@ -97,7 +99,7 @@ function Home() {
       <div className="body-info">
         <div className="body-info-img" data-aos="zoom-in">
           <img
-            src={panda}
+            src={stat3}
             alt="undraw-healthy-lifestyle-6tyl"
             border="0"
             className="home-image"
@@ -112,7 +114,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="body-info odd">
+      {/* <div className="body-info odd">
         <div className="body-info-img" data-aos="zoom-in">
           <img
             src={panda}
@@ -129,7 +131,7 @@ function Home() {
             clogging up a group chat.
           </p>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
