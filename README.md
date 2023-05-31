@@ -44,13 +44,14 @@ Agri-Cure is built using the following technologies:
 To install and run Agri-Cure on your local machine, you need to follow these steps:
 
 1. Clone the git repository using the command `git clone https://github.com/Denver04/Agri-Cure.git`.
-2. Navigate to the frontend directory using the command `cd frontend`.
-3. Install the dependencies using the command `npm install`.
-4. Start the vite react app using the command `npm run dev`.
-5. Navigate to the backend directory using the command `cd ../backend`.
-6. Install the dependencies using the command `npm install`.
-7. Start the nodejs server using the command `npm start`.
-8. Open your browser and go to the URL `http://localhost:5173` to view the website.
+2. Install all the dependencies for python listed in requirements.txt file using `pip install -r requirements.txt`.
+3. Navigate to the frontend directory using the command `cd frontend`.
+4. Install the dependencies using the command `npm install`.
+5. Start the vite react app using the command `npm run dev`.
+6. Navigate to the backend directory using the command `cd ../backend`.
+7. Install the dependencies using the command `npm install`.
+8. Start the nodejs server using the command `npm run dev`.
+9. Open your browser and go to the URL `http://localhost:5173` to view the website.
 
 ## Contributing
 
